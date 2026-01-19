@@ -922,23 +922,87 @@ export const FullScreenScrollFX = forwardRef<
             color: #111;
           }
 
+          @media (max-width: 1024px) {
+            .fx-header {
+              font-size: clamp(1.2rem, 5vw, 4rem);
+              padding-top: 3vh;
+            }
+            .fx-content {
+              inset: 8vh 0 8vh 0;
+              grid-template-columns: 1fr 1.2fr 1fr;
+            }
+            .fx-item {
+              font-size: clamp(0.875rem, 2vw, 1.5rem);
+            }
+            .fx-featured-title {
+              font-size: clamp(1.5rem, 6vw, 5rem);
+            }
+          }
+
           @media (max-width: 900px) {
             .fx-content {
               grid-template-columns: 1fr;
-              row-gap: 3vh;
+              row-gap: 4vh;
               place-items: center;
+              inset: 6vh 0 6vh 0;
             }
             .fx-left,
             .fx-right,
             .fx-center {
               height: auto;
+              width: 100%;
             }
             .fx-left,
             .fx-right {
               justify-items: center;
+              height: auto;
             }
             .fx-track {
               transform: none !important;
+            }
+            .fx-item {
+              text-align: center;
+              font-size: clamp(0.875rem, 3vw, 1.25rem);
+            }
+            .fx-featured-title {
+              font-size: clamp(1.5rem, 8vw, 4rem);
+              line-height: 1.1;
+            }
+            .fx-footer-title {
+              font-size: clamp(1rem, 4vw, 3rem);
+            }
+            .fx-progress {
+              width: 150px;
+            }
+          }
+
+          @media (max-width: 640px) {
+            .fx-header {
+              font-size: clamp(1rem, 6vw, 3rem);
+              padding-top: 2vh;
+            }
+            .fx-content {
+              inset: 4vh 0 4vh 0;
+              row-gap: 3vh;
+            }
+            .fx-item {
+              font-size: clamp(0.75rem, 4vw, 1rem);
+              margin: 8px 0;
+            }
+            .fx-featured-title {
+              font-size: clamp(1.25rem, 10vw, 3rem);
+            }
+            .fx-footer {
+              padding-bottom: 2vh;
+            }
+            .fx-footer-title {
+              font-size: clamp(0.875rem, 5vw, 2rem);
+            }
+            .fx-progress {
+              width: 120px;
+            }
+            .fx-progress-numbers {
+              font-size: 0.7rem;
             }
           }
         `}</style>

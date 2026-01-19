@@ -62,20 +62,20 @@ export default function Home() {
         }}
       />
 
-      <section id="services" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 md:grid-cols-12 items-start">
-          <div className="md:col-span-4">
-            <div className="sticky top-24">
+      <section id="services" className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid gap-8 sm:gap-12 md:grid-cols-12 items-start">
+          <div className="md:col-span-4 mb-8 md:mb-0">
+            <div className="md:sticky md:top-24">
               <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
                 <span className="h-px w-8 bg-orange-500"></span>
                 Why Base One
               </div>
-              <h2 className="text-3xl font-bold text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
                 We strip away the <span className="text-white/40">agency bloat.</span>
               </h2>
             </div>
           </div>
-          <div className="md:col-span-8 grid gap-8 md:grid-cols-2">
+          <div className="md:col-span-8 grid gap-6 sm:gap-8 sm:grid-cols-2">
             {[
               {
                 title: "Custom Design",
@@ -104,12 +104,12 @@ export default function Home() {
             ].map((card) => (
               <div
                 key={card.title}
-                className="rounded-3xl bg-white/5 p-8 border border-white/10 hover:bg-white/10 transition-colors"
+                className="rounded-2xl sm:rounded-3xl bg-white/5 p-6 sm:p-8 border border-white/10 hover:bg-white/10 transition-colors"
               >
-                <div className="w-12 h-12 rounded-2xl bg-black border border-white/10 flex items-center justify-center text-orange-400 mb-6 text-xl">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-black border border-white/10 flex items-center justify-center text-orange-400 mb-4 sm:mb-6 text-lg sm:text-xl">
                   {card.icon}
                 </div>
-                <h3 className="text-lg font-bold text-white mb-3">{card.title}</h3>
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">{card.title}</h3>
                 <p className="text-white/60 text-sm leading-relaxed">{card.copy}</p>
               </div>
             ))}
@@ -117,15 +117,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="bg-white text-black py-20">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <section id="work" className="bg-white text-black py-12 sm:py-20">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
             <div>
               <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-black/60 mb-2">
                 <span className="inline-block h-2 w-2 rounded-full bg-orange-500"></span>
                 Selected Work
               </div>
-              <h2 className="text-4xl font-bold tracking-tight">Recent builds</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Recent builds</h2>
             </div>
             <a
               href="#contact"
@@ -135,7 +135,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Project Alpha",
@@ -157,7 +157,7 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.title} className="group cursor-pointer">
-                <div className="aspect-[4/3] rounded-3xl bg-gray-100 overflow-hidden mb-5 border border-black/5 relative">
+                <div className="aspect-[4/3] rounded-2xl sm:rounded-3xl bg-gray-100 overflow-hidden mb-4 sm:mb-5 border border-black/5 relative">
                   <img
                     src={item.img}
                     alt={item.title}
@@ -165,22 +165,22 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
                 </div>
-                <h3 className="text-lg font-bold">{item.title}</h3>
-                <p className="text-sm text-black/60">{item.meta}</p>
+                <h3 className="text-base sm:text-lg font-bold">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-black/60">{item.meta}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="faq" className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-4 space-y-10">
+      <section id="faq" className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid gap-8 sm:gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4 space-y-8 sm:space-y-10 mb-8 lg:mb-0">
             <div>
               <div className="text-xs uppercase tracking-widest text-white/40 mb-2">
                 Websites Delivered
               </div>
-              <div className="text-6xl font-bold text-white tracking-tighter">
+              <div className="text-5xl sm:text-6xl font-bold text-white tracking-tighter">
                 240<span className="text-orange-500">+</span>
               </div>
             </div>
@@ -188,11 +188,11 @@ export default function Home() {
               <div className="text-xs uppercase tracking-widest text-white/40 mb-2">
                 Hosted Clients
               </div>
-              <div className="text-6xl font-bold text-white tracking-tighter">
+              <div className="text-5xl sm:text-6xl font-bold text-white tracking-tighter">
                 70<span className="text-orange-500">+</span>
               </div>
             </div>
-            <div className="relative p-6 rounded-3xl bg-white/5 border border-white/10">
+            <div className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10">
               <p className="text-white/80 italic text-sm mb-4">
                 Best investment I made for my business this year. Simple process and great
                 result.
@@ -207,8 +207,8 @@ export default function Home() {
           </div>
 
           <div className="lg:col-span-8">
-            <h3 className="text-3xl font-bold mb-8">Common Questions</h3>
-            <div className="divide-y divide-white/10 rounded-3xl border border-white/10 bg-white/5 overflow-hidden">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Common Questions</h3>
+            <div className="divide-y divide-white/10 rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 overflow-hidden">
               {[
                 {
                   q: "What exactly do I get for $450?",
@@ -231,14 +231,14 @@ export default function Home() {
                     "Typically 3-5 business days from when we receive your content (logo, text, images).",
                 },
               ].map((item, idx) => (
-                <details key={item.q} className="group p-6 cursor-pointer" open={idx === 0}>
-                  <summary className="flex items-center justify-between gap-4 font-semibold text-white list-none">
+                <details key={item.q} className="group p-4 sm:p-6 cursor-pointer" open={idx === 0}>
+                  <summary className="flex items-center justify-between gap-3 sm:gap-4 font-semibold text-white list-none text-sm sm:text-base">
                     {item.q}
-                    <span className="text-orange-500 text-xl group-open:rotate-45 transition-transform duration-300">
+                    <span className="text-orange-500 text-lg sm:text-xl group-open:rotate-45 transition-transform duration-300 flex-shrink-0">
                       +
                     </span>
                   </summary>
-                  <p className="mt-4 text-sm text-white/60 leading-relaxed">{item.a}</p>
+                  <p className="mt-3 sm:mt-4 text-sm text-white/60 leading-relaxed">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -246,15 +246,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-6 pb-24">
+      <section id="contact" className="mx-auto max-w-6xl px-4 sm:px-6 pb-16 sm:pb-24">
         <div className="grid gap-6 md:grid-cols-12">
-          <div className="md:col-span-5 relative overflow-hidden rounded-3xl bg-orange-500 p-10 flex flex-col justify-between">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div className="md:col-span-5 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-orange-500 p-6 sm:p-10 flex flex-col justify-between min-h-[280px] sm:min-h-auto">
+            <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="relative z-10">
-              <h3 className="text-3xl font-bold text-white leading-tight mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-3 sm:mb-4">
                 Ready to look <br /> professional?
               </h3>
-              <p className="text-white/80 text-sm mb-8">
+              <p className="text-white/80 text-sm mb-6 sm:mb-8">
                 Fill out the form and we'll text you a quote and timeline within 2 hours.
               </p>
             </div>
@@ -262,13 +262,13 @@ export default function Home() {
               <div className="text-xs uppercase tracking-widest text-white/60 mb-2">
                 Contact Direct
               </div>
-              <div className="text-2xl font-bold text-white">hello@baseone.au</div>
+              <div className="text-xl sm:text-2xl font-bold text-white break-all">hello@baseone.au</div>
             </div>
           </div>
 
           <div className="md:col-span-7">
-            <form className="rounded-3xl bg-white/5 border border-white/10 p-8 h-full">
-              <div className="grid gap-5 md:grid-cols-2">
+            <form className="rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 h-full">
+              <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
                 <div className="md:col-span-2">
                   <label className="text-xs uppercase tracking-widest text-white/40 mb-2 block">
                     Name
@@ -276,7 +276,7 @@ export default function Home() {
                   <input
                     type="text"
                     placeholder="John Smith"
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20 text-sm sm:text-base"
                   />
                 </div>
                 <div className="md:col-span-2">
@@ -286,7 +286,7 @@ export default function Home() {
                   <input
                     type="tel"
                     placeholder="0400 ..."
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20 text-sm sm:text-base"
                   />
                 </div>
                 <div className="md:col-span-2">
@@ -296,13 +296,13 @@ export default function Home() {
                   <textarea
                     rows={3}
                     placeholder="Tell us about your project..."
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20 text-sm sm:text-base resize-none"
                   />
                 </div>
               </div>
               <button
                 type="submit"
-                className="mt-6 w-full rounded-xl bg-white text-black py-4 font-bold text-sm hover:bg-gray-200 transition-colors"
+                className="mt-5 sm:mt-6 w-full rounded-xl bg-white text-black py-3 sm:py-4 font-bold text-sm hover:bg-gray-200 transition-colors"
               >
                 Send Enquiry {"->"}
               </button>
@@ -310,6 +310,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
   );
 }
