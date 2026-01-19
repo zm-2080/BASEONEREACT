@@ -131,7 +131,7 @@ export default function Home() {
               href="#contact"
               className="text-sm font-bold border-b-2 border-orange-500 pb-0.5 hover:text-orange-500 transition-colors"
             >
-              Get yours built next ->
+              Get yours built next {"->"}
             </a>
           </div>
 
@@ -304,7 +304,7 @@ export default function Home() {
                 type="submit"
                 className="mt-6 w-full rounded-xl bg-white text-black py-4 font-bold text-sm hover:bg-gray-200 transition-colors"
               >
-                Send Enquiry ->
+                Send Enquiry {"->"}
               </button>
             </form>
           </div>
