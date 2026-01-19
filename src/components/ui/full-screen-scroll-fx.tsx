@@ -754,8 +754,8 @@ export const FullScreenScrollFX = forwardRef<
           .fx-header {
             grid-column: 1 / 13;
             align-self: start;
-            padding-top: 6vh;
-            font-size: clamp(2rem, 9vw, 9rem);
+            padding-top: 4vh;
+            font-size: clamp(1.6rem, 6vw, 6rem);
             line-height: 0.86;
             text-align: center;
             color: var(--fx-text);
@@ -767,7 +767,7 @@ export const FullScreenScrollFX = forwardRef<
           .fx-content {
             grid-column: 1 / 13;
             position: absolute;
-            inset: 0;
+            inset: 12vh 0 12vh 0;
             display: grid;
             grid-template-columns: 1fr 1.3fr 1fr;
             align-items: center;
@@ -872,12 +872,12 @@ export const FullScreenScrollFX = forwardRef<
           .fx-footer {
             grid-column: 1 / 13;
             align-self: end;
-            padding-bottom: 5vh;
+            padding-bottom: 3vh;
             text-align: center;
           }
           .fx-footer-title {
             color: var(--fx-text);
-            font-size: clamp(1.6rem, 7vw, 7rem);
+            font-size: clamp(1.2rem, 5vw, 4rem);
             font-weight: 900;
             letter-spacing: -0.01em;
             line-height: 0.9;
