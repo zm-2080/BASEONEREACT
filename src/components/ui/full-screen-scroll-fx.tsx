@@ -177,7 +177,9 @@ export const FullScreenScrollFX = forwardRef<
         <span className="fx-word-mask" key={i}>
           <span
             className="fx-word"
-            ref={(el) => el && tempWordBucket.current.push(el)}
+            ref={(el) => {
+              if (el) tempWordBucket.current.push(el);
+            }}
           >
             {w}
           </span>
