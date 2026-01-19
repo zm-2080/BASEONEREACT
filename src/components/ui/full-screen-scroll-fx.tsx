@@ -767,7 +767,7 @@ export const FullScreenScrollFX = forwardRef<
           .fx-content {
             grid-column: 1 / 13;
             position: absolute;
-            inset: 12vh 0 12vh 0;
+            inset: 16vh 0 14vh 0;
             display: grid;
             grid-template-columns: 1fr 1.3fr 1fr;
             align-items: center;
@@ -801,7 +801,7 @@ export const FullScreenScrollFX = forwardRef<
             opacity: 0.35;
             transition: opacity 0.3s ease, transform 0.3s ease;
             position: relative;
-            font-size: clamp(1rem, 2.4vw, 1.8rem);
+            font-size: clamp(0.9rem, 1.8vw, 1.4rem);
             user-select: none;
             cursor: pointer;
           }
@@ -842,9 +842,13 @@ export const FullScreenScrollFX = forwardRef<
             text-align: center;
             height: 60vh;
             overflow: hidden;
+            position: relative;
           }
           .fx-featured {
             position: absolute;
+            width: 100%;
+            max-width: 24rem;
+            margin: 0 auto;
             opacity: 0;
             visibility: hidden;
           }
@@ -857,7 +861,9 @@ export const FullScreenScrollFX = forwardRef<
             color: var(--fx-text);
             font-weight: 900;
             letter-spacing: -0.01em;
-            font-size: clamp(2rem, 7.5vw, 6rem);
+            font-size: clamp(1.6rem, 5.6vw, 4.4rem);
+            line-height: 1;
+            text-wrap: balance;
           }
           .fx-word-mask {
             display: inline-block;
