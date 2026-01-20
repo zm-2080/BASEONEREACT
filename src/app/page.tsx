@@ -62,7 +62,7 @@ export default function Home() {
               secondImage="/new.png"
               firstImageClassName="object-cover object-center"
               secondImageClassname="object-cover object-center"
-              className="h-[260px] w-full sm:h-[420px] lg:h-[520px] rounded-2xl"
+              className="h-[320px] w-full sm:h-[480px] lg:h-[600px] rounded-2xl"
               slideMode="hover"
               showHandlebar={true}
             />
