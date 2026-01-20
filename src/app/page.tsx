@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <main className="bg-[#07090b] text-white">
       <LiquidMetalHero
-        badge="Local Business Web Studio"
         title="Websites that win jobs."
         subtitle="Professional, mobile-fast sites for $450. Stop losing quotes to competitors with better websites. No bloat, just leads."
         primaryCtaLabel="Request Proposal"
