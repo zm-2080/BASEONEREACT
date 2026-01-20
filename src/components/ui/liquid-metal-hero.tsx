@@ -55,13 +55,22 @@ export default function LiquidMetalHero({
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#07090b]">
-      <LiquidMetal
-        {...liquidMetalPresets[2]}
-        style={{ position: "fixed", inset: 0, zIndex: -10 }}
-      />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <LiquidMetal
+          {...liquidMetalPresets[0]}
+          style={{ 
+            width: "100%", 
+            height: "100%",
+            position: "absolute",
+            top: 0,
+            left: 0
+          }}
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#07090b]/70 via-[#07090b]/50 to-[#07090b]/70 z-[1]"></div>
       
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
+      <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
         <motion.div 
           className="text-center space-y-8"
           variants={containerVariants}
