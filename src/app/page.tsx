@@ -4,6 +4,7 @@ import React from "react";
 import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
 import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
+import HoverFooter from "@/components/ui/hover-footer";
 
 export default function Home() {
   return (
@@ -265,6 +266,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <HoverFooter />
       </main>
   );
 }
