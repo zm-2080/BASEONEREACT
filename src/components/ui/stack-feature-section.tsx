@@ -2,8 +2,8 @@
 
 import { Button } from "@/components/ui/button";
 import {
-  FaPenRuler,
-  FaMobileScreen,
+  FaPencilRuler,
+  FaMobile,
   FaGoogle,
   FaHeadset,
   FaReact,
@@ -12,12 +12,8 @@ import {
   FaCss3Alt,
   FaJs,
   FaWordpress,
-  FaShopify,
-  FaBootstrap,
-  FaSass,
   FaGitAlt,
   FaFigma,
-  FaChrome,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -28,8 +24,8 @@ import {
 } from "react-icons/si";
 
 const iconConfigs = [
-  { Icon: FaPenRuler, color: "#f97316", label: "Custom Design" },
-  { Icon: FaMobileScreen, color: "#f97316", label: "Mobile First" },
+  { Icon: FaPencilRuler, color: "#f97316", label: "Custom Design" },
+  { Icon: FaMobile, color: "#f97316", label: "Mobile First" },
   { Icon: FaGoogle, color: "#4285F4", label: "Google Ready" },
   { Icon: FaHeadset, color: "#f97316", label: "Local Support" },
   { Icon: FaReact, color: "#61DAFB" },
@@ -92,7 +88,7 @@ export default function StackFeatureSection() {
         <div className="relative w-[40rem] sm:w-[50rem] h-[40rem] sm:h-[50rem] md:translate-x-[30%] flex items-center justify-center">
           {/* Center Circle */}
           <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center">
-            <FaPenRuler className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500" />
+            <FaPencilRuler className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500" />
           </div>
 
           {/* Generate Orbits */}
