@@ -58,8 +58,8 @@ export default function Home() {
               </div>
             </div>
             <Compare
-              firstImage="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80"
-              secondImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+              firstImage="/old.png"
+              secondImage="/new.png"
               firstImageClassName="object-cover object-center"
               secondImageClassname="object-cover object-center"
               className="h-[300px] w-full sm:h-[400px] sm:w-[600px] md:h-[500px] md:w-[700px] rounded-2xl"
