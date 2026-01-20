@@ -19,8 +19,8 @@ export default function Home() {
           document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
         }}
         features={[
-          "$450 Build",
-          "$20/mo Support",
+          "$499 Build",
+          "$30/mo Support",
           "3-5 Day Turnaround"
         ]}
       />
