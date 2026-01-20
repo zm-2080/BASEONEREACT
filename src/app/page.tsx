@@ -31,7 +31,7 @@ export default function Home() {
         <StackFeatureSection />
       </section>
 
-      <section id="compare" className="mx-auto max-w-7xl px-4 sm:px-6 pt-4 sm:pt-8 pb-12 sm:pb-20">
+      <section id="compare" className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-4 sm:pt-8 pb-12 sm:pb-20">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
             <span className="h-px w-8 bg-orange-500"></span>
@@ -45,8 +45,8 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="flex justify-center items-center">
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
+        <div className="flex justify-center items-center w-full">
+          <div className="w-full bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
               <div className="text-center sm:text-left">
                 <div className="text-sm font-semibold text-white/40 mb-2">Before</div>
@@ -62,7 +62,7 @@ export default function Home() {
               secondImage="/new.png"
               firstImageClassName="object-cover object-center"
               secondImageClassname="object-cover object-center"
-              className="h-[300px] w-full sm:h-[400px] sm:w-[600px] md:h-[500px] md:w-[700px] rounded-2xl"
+              className="h-[260px] w-full sm:h-[420px] lg:h-[520px] rounded-2xl"
               slideMode="hover"
               showHandlebar={true}
             />
