@@ -26,11 +26,11 @@ export default function Home() {
         ]}
       />
 
-      <section id="services" className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20">
+      <section id="services" className="mx-auto max-w-7xl pt-4 sm:pt-8 pb-4 sm:pb-8">
         <StackFeatureSection />
       </section>
 
-      <section id="compare" className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20">
+      <section id="compare" className="mx-auto max-w-7xl px-4 sm:px-6 pt-4 sm:pt-8 pb-12 sm:pb-20">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
             <span className="h-px w-8 bg-orange-500"></span>
