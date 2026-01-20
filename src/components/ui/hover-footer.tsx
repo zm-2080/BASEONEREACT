@@ -36,7 +36,7 @@ export const TextHoverEffect = ({
       ref={svgRef}
       width="100%"
       height="100%"
-      viewBox="0 0 300 100"
+      viewBox="0 0 800 150"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -88,8 +88,9 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
+        strokeWidth="1"
+        fontSize="120"
+        className="fill-transparent stroke-neutral-200 font-[helvetica] font-bold dark:stroke-neutral-800"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -99,13 +100,14 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="fill-transparent stroke-[#f97316] font-[helvetica] text-7xl font-bold 
+        strokeWidth="1"
+        fontSize="120"
+        className="fill-transparent stroke-[#f97316] font-[helvetica] font-bold 
         dark:stroke-[#f9731699]"
-        initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
+        initial={{ strokeDashoffset: 2000, strokeDasharray: 2000 }}
         animate={{
           strokeDashoffset: 0,
-          strokeDasharray: 1000,
+          strokeDasharray: 2000,
         }}
         transition={{
           duration: 4,
@@ -120,9 +122,10 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth="1"
+        fontSize="120"
         mask="url(#textMask)"
-        className="fill-transparent font-[helvetica] text-7xl font-bold"
+        className="fill-transparent font-[helvetica] font-bold"
       >
         {text}
       </text>
@@ -206,7 +209,7 @@ export default function HoverFooter() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-white/60">
-              Professional websites for local businesses. $450 build, $20/month support. No bloat, just leads.
+              Professional websites for local businesses. $499 build, $30/month support. No bloat, just leads.
             </p>
           </div>
 

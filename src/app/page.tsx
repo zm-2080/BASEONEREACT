@@ -11,7 +11,7 @@ export default function Home() {
     <main className="bg-[#07090b] text-white">
       <LiquidMetalHero
         title="Websites that win jobs."
-        subtitle="Professional, mobile-fast sites for $450. Stop losing quotes to competitors with better websites. No bloat, just leads."
+        subtitle="Professional, mobile-fast sites for $499. Stop losing quotes to competitors with better websites. No bloat, just leads."
         primaryCtaLabel="Request Proposal"
         secondaryCtaLabel="View Portfolio"
         onPrimaryCtaClick={() => {
@@ -167,19 +167,19 @@ export default function Home() {
             <div className="divide-y divide-white/10 rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 overflow-hidden">
               {[
                 {
-                  q: "What exactly do I get for $450?",
+                  q: "What exactly do I get for $499?",
                   a:
                     "You get a fully custom designed, 5-page website built to look great on mobile and desktop. This includes your Home, About, Services, Gallery, and Contact pages.",
                 },
                 {
-                  q: "What does the $20/month cover?",
+                  q: "What does the $30/month cover?",
                   a:
                     "This covers high-speed hosting, SSL security, daily backups, and up to 15 minutes of content edits per month.",
                 },
                 {
                   q: "Do I own the website?",
                   a:
-                    "Yes. Once the $450 invoice is paid, the design and content are yours. If you ever want to move hosts, we can package the files for you.",
+                    "Yes. Once the $499 invoice is paid, the design and content are yours. If you ever want to move hosts, we can package the files for you.",
                 },
                 {
                   q: "How long does it take?",
