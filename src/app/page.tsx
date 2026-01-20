@@ -31,7 +31,7 @@ export default function Home() {
         <StackFeatureSection />
       </section>
 
-      <section id="compare" className="w-full px-4 sm:px-6 lg:px-10 xl:px-14 pt-4 sm:pt-8 pb-12 sm:pb-20">
+      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 pb-12 sm:pb-20">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
             <span className="h-px w-8 bg-orange-500"></span>
@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         
         <div className="flex justify-center items-center w-full">
-          <div className="w-full bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+          <div className="w-full max-w-6xl bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
               <div className="text-center sm:text-left">
                 <div className="text-sm font-semibold text-white/40 mb-2">Before</div>
