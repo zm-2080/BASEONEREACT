@@ -5,6 +5,7 @@ import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
 import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
+import TextBlockAnimation from "@/components/ui/text-block-animation";
 
 export default function Home() {
   return (
@@ -26,6 +27,71 @@ export default function Home() {
           "3-5 Day Turnaround"
         ]}
       />
+
+      {/* Text Block Animation Section */}
+      <section className="w-full py-16 sm:py-24 lg:py-32 bg-[#07090b] relative overflow-hidden">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="space-y-16 sm:space-y-20">
+            {/* Main Headline */}
+            <div className="max-w-5xl">
+              <TextBlockAnimation
+                blockColor="#f97316"
+                animateOnScroll={true}
+                delay={0.1}
+                duration={0.7}
+                stagger={0.08}
+              >
+                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-white">
+                  Stop losing quotes.<br />
+                  <span className="text-orange-500">Start winning jobs.</span>
+                </h2>
+              </TextBlockAnimation>
+            </div>
+
+            {/* Value Proposition */}
+            <div className="max-w-4xl space-y-8">
+              <TextBlockAnimation 
+                blockColor="#07090b" 
+                duration={0.6}
+                stagger={0.05}
+              >
+                <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-white/80 font-light">
+                  Your competitors have better websites. That&apos;s why they&apos;re getting the quotes you should be winning. 
+                  We build <strong className="text-white font-semibold">professional, mobile-fast sites</strong> that make your business look 
+                  as good as your work.
+                </p>
+              </TextBlockAnimation>
+
+              <TextBlockAnimation 
+                blockColor="#f97316" 
+                duration={0.65}
+                stagger={0.06}
+              >
+                <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/70">
+                  No agency bloat. No confusing contracts. Just a <strong className="text-orange-500 font-semibold">$499 custom website</strong> and 
+                  <strong className="text-orange-500 font-semibold"> $30/month</strong> for hosting, security, and quick edits. 
+                  Live in 3-5 days.
+                </p>
+              </TextBlockAnimation>
+            </div>
+
+            {/* Testimonial Quote */}
+            <div className="pl-4 sm:pl-6 lg:pl-8 border-l-2 border-orange-500/50 max-w-3xl">
+              <TextBlockAnimation 
+                blockColor="#07090b" 
+                duration={0.6}
+              >
+                <p className="text-base sm:text-lg md:text-xl italic text-white/60 leading-relaxed">
+                  &quot;Best investment I made for my business this year. Simple process, great result, and I finally look professional online.&quot;
+                </p>
+                <p className="mt-4 text-sm sm:text-base text-white/50 font-medium">
+                  — Local Business Owner
+                </p>
+              </TextBlockAnimation>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="services" className="mx-auto max-w-7xl pt-4 sm:pt-8 pb-4 sm:pb-8">
         <StackFeatureSection />
