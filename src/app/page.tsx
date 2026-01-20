@@ -2,6 +2,7 @@
 
 import React from "react";
 import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
+import StackFeatureSection from "@/components/ui/stack-feature-section";
 
 export default function Home() {
   return (
@@ -24,59 +25,8 @@ export default function Home() {
         ]}
       />
 
-      <section id="services" className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20">
-        <div className="grid gap-8 sm:gap-12 md:grid-cols-12 items-start">
-          <div className="md:col-span-4 mb-8 md:mb-0">
-            <div className="md:sticky md:top-24">
-              <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
-                <span className="h-px w-8 bg-orange-500"></span>
-                Why Base One
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
-                We strip away the <span className="text-white/40">agency bloat.</span>
-              </h2>
-            </div>
-          </div>
-          <div className="md:col-span-8 grid gap-6 sm:gap-8 sm:grid-cols-2">
-            {[
-              {
-                title: "Custom Design",
-                copy:
-                  "We don't just use generic templates. We design a site that fits your brand and speaks to your local customers.",
-                icon: "D",
-              },
-              {
-                title: "Mobile First",
-                copy:
-                  "Over 70% of local searches happen on phones. We make sure your 'Call Now' button is right where their thumb is.",
-                icon: "M",
-              },
-              {
-                title: "Google Ready",
-                copy:
-                  "Built with clean code and proper structure so Google can find and rank your business locally.",
-                icon: "G",
-              },
-              {
-                title: "Local Support",
-                copy:
-                  "Need a text change? New photo? Just email us. We handle the tech so you can handle the tools.",
-                icon: "S",
-              },
-            ].map((card) => (
-              <div
-                key={card.title}
-                className="rounded-2xl sm:rounded-3xl bg-white/5 p-6 sm:p-8 border border-white/10 hover:bg-white/10 transition-colors"
-              >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-black border border-white/10 flex items-center justify-center text-orange-400 mb-4 sm:mb-6 text-lg sm:text-xl">
-                  {card.icon}
-                </div>
-                <h3 className="text-base sm:text-lg font-bold text-white mb-2 sm:mb-3">{card.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{card.copy}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section id="services" className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20">
+        <StackFeatureSection />
       </section>
 
       <section id="work" className="bg-white text-black py-12 sm:py-20">
