@@ -201,9 +201,6 @@ export default function HoverFooter() {
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#f97316] text-white font-bold text-sm shadow-lg shadow-[#f97316]/20">
-                B1
-              </span>
               <span className="text-white text-3xl font-bold">
                 <span className="font-bold">Base</span><span className="opacity-70 font-light">One</span>
               </span>
