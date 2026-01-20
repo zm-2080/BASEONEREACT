@@ -3,6 +3,7 @@
 import React from "react";
 import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
 import StackFeatureSection from "@/components/ui/stack-feature-section";
+import { Compare } from "@/components/ui/compare";
 
 export default function Home() {
   return (
@@ -27,6 +28,48 @@ export default function Home() {
 
       <section id="services" className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20">
         <StackFeatureSection />
+      </section>
+
+      <section id="compare" className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-20">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
+            <span className="h-px w-8 bg-orange-500"></span>
+            The Difference
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            Before vs. After
+          </h2>
+          <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto">
+            See the transformation. Generic templates vs. custom Base One design.
+          </p>
+        </div>
+        
+        <div className="flex justify-center items-center">
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 sm:p-8 backdrop-blur-sm">
+            <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
+              <div className="text-center sm:text-left">
+                <div className="text-sm font-semibold text-white/40 mb-2">Before</div>
+                <div className="text-lg font-bold text-white">Generic Template</div>
+              </div>
+              <div className="text-center sm:text-right sm:ml-auto">
+                <div className="text-sm font-semibold text-white/40 mb-2">After</div>
+                <div className="text-lg font-bold text-orange-500">Base One Design</div>
+              </div>
+            </div>
+            <Compare
+              firstImage="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80"
+              secondImage="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+              firstImageClassName="object-cover object-center"
+              secondImageClassname="object-cover object-center"
+              className="h-[300px] w-full sm:h-[400px] sm:w-[600px] md:h-[500px] md:w-[700px] rounded-2xl"
+              slideMode="hover"
+              showHandlebar={true}
+            />
+            <div className="mt-6 text-center text-sm text-white/60">
+              Hover or drag to compare
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="work" className="bg-white text-black py-12 sm:py-20">
