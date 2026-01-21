@@ -80,8 +80,8 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-6xl h-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-16 flex flex-col">
-        <div className="space-y-3">
+      <div className="relative z-10 w-full h-full px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-16 flex flex-col">
+        <div className="space-y-3 text-left">
           {tagline ? (
             <motion.div
               initial="hidden"
@@ -104,7 +104,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 },
               },
             }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[0.95] max-w-4xl"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[0.95] max-w-[18ch]"
           >
             {typeof title === "string"
               ? title.split(" ").map((word, i) => (
@@ -117,7 +117,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </div>
 
         {/* Marquee images between title and bottom-left text */}
-        <div className="mt-8 sm:mt-10 lg:mt-12">
+        <div className="mt-8 sm:mt-10 lg:mt-12 -mx-4 sm:-mx-6 lg:-mx-10">
           <div className="relative w-full overflow-hidden">
             <motion.div
               className="relative z-10 flex gap-4"
@@ -148,7 +148,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </div>
 
         {/* Bottom-left copy */}
-        <div className="mt-auto max-w-md space-y-4 text-white/70">
+        <div className="mt-auto max-w-md space-y-4 text-white/70 text-left">
           <motion.p
             initial="hidden"
             animate="show"
