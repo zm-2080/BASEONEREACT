@@ -93,12 +93,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-7xl pt-2 sm:pt-4 pb-2 sm:pb-4">
+      <section id="services" className="mx-auto max-w-7xl pt-2 sm:pt-4 pb-1 sm:pb-2">
         <StackFeatureSection />
       </section>
 
-      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-6 sm:pb-10">
-        <div className="text-center mb-12">
+      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 pb-6 sm:pb-10">
+        <div className="text-center mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
             <span className="h-px w-8 bg-orange-500"></span>
             The Difference
