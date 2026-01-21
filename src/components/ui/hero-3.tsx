@@ -3,6 +3,7 @@
 import React from "react";
 import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { FlickeringGrid } from "@/components/ui/flickering-grid-hero";
 
 interface AnimatedMarqueeHeroProps {
   tagline?: string;
@@ -37,6 +38,19 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   };
 
   const duplicatedImages = [...images, ...images];
+  const LOGO_BASE64 =
+    "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODQiIGhlaWdodD0iODQiIHZpZXdCb3g9IjAgMCA4NCA4NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTMgMzJDMTMgMjAuOTU0MyAyMS45NTQzIDEyIDMzIDEyQzQ0LjA0NTcgMTIgNTMgMjAuOTU0MyA1MyAzMkM1MyA0My4wNDU3IDQ0LjUgNDcuNSAzMyA1Mkg1M0M1MyA2My4wNDU3IDQ0LjA0NTcgNzIgMzMgNzJDMjEuOTU0MyA3MiAxMyA2My4wNDU3IDEzIDUyQzEzIDQwLjk1NDMgMjIuNSAzNCAzMyAzMkgxM1oiIGZpbGw9IndoaXRlIi8+PHBhdGggZD0iTTUzIDcyQzY0LjczMjQgNjcuMDk3NyA3MyA1NS41MTE3IDczIDQyQzczIDI4LjQ4ODMgNjQuNzMyNCAxNi45MDIzIDUzIDEyVjcyWiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=";
+
+  const maskStyle = {
+    WebkitMaskImage: `url('${LOGO_BASE64}')`,
+    WebkitMaskSize: "90vw",
+    WebkitMaskPosition: "center",
+    WebkitMaskRepeat: "no-repeat",
+    maskImage: `url('${LOGO_BASE64}')`,
+    maskSize: "90vw",
+    maskPosition: "center",
+    maskRepeat: "no-repeat",
+  } as const;
 
   return (
     <section
@@ -90,8 +104,25 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
       </div>
 
       <div className="absolute bottom-0 left-0 w-full h-1/2 md:h-[55%] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+        <FlickeringGrid
+          className="absolute inset-0 z-0"
+          squareSize={4}
+          gridGap={4}
+          flickerChance={0.12}
+          color="rgb(249, 115, 22)"
+          maxOpacity={0.18}
+        />
+        <div className="absolute inset-0 z-0 opacity-80" style={maskStyle}>
+          <FlickeringGrid
+            squareSize={3}
+            gridGap={6}
+            flickerChance={0.16}
+            color="rgb(255, 255, 255)"
+            maxOpacity={0.45}
+          />
+        </div>
         <motion.div
-          className="flex gap-4"
+          className="relative z-10 flex gap-4"
           animate={{
             x: ["-100%", "0%"],
             transition: {
