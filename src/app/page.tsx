@@ -86,6 +86,55 @@ export default function Home() {
         <StackFeatureSection />
       </section>
 
+      {/* Details / Proof Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-[#07090b]">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">
+                // Why choose us
+              </div>
+              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
+                DETAILS MAKE
+                <br />
+                THE DIFFERENCE
+              </h2>
+            </div>
+            <p className="text-white/60 max-w-md text-sm sm:text-base leading-relaxed">
+              We focus on the small things that win trust fast — clear copy, fast load times,
+              and clean layouts that turn visitors into real enquiries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-white/10 pt-6">
+            {[
+              { value: "240+", label: "Sites delivered" },
+              { value: "3–5 days", label: "Typical turnaround" },
+              { value: "70+", label: "Hosted clients" },
+              { value: "24hr", label: "Average response time" },
+            ].map((stat) => (
+              <div key={stat.label} className="flex items-end justify-between border-b border-white/10 pb-4">
+                <div className="text-4xl sm:text-5xl font-bold text-white">{stat.value}</div>
+                <div className="text-xs uppercase tracking-widest text-white/50">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              "Local trades",
+              "Service pros",
+              "Builders",
+              "Landscapers",
+            ].map((item) => (
+              <div key={item} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs sm:text-sm text-white/60">
+                {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 pb-6 sm:pb-10">
         <div className="text-center mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
