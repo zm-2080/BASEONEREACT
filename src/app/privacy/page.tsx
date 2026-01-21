@@ -95,10 +95,10 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
 
-        <div className="mt-10">
+        <div className="fixed bottom-6 right-6 z-50">
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+            className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-black/20 hover:bg-orange-600 transition-colors"
           >
             Back to Home
           </a>
