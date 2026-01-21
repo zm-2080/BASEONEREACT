@@ -29,7 +29,7 @@ export default function Home() {
       />
 
       {/* Text Block Animation Section */}
-      <section className="w-full py-16 sm:py-24 lg:py-32 bg-[#07090b] relative overflow-hidden">
+      <section className="w-full py-8 sm:py-12 lg:py-16 bg-[#07090b] relative overflow-hidden">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="space-y-16 sm:space-y-20">
             {/* Main Headline */}
@@ -93,11 +93,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-7xl pt-4 sm:pt-8 pb-4 sm:pb-8">
+      <section id="services" className="mx-auto max-w-7xl pt-2 sm:pt-4 pb-2 sm:pb-4">
         <StackFeatureSection />
       </section>
 
-      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-4 sm:pt-8 pb-12 sm:pb-20">
+      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-2 sm:pt-4 pb-6 sm:pb-10">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
             <span className="h-px w-8 bg-orange-500"></span>
@@ -139,7 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="work" className="bg-white text-black py-12 sm:py-20">
+      <section id="work" className="bg-white text-black py-6 sm:py-10">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
             <div>
@@ -204,7 +204,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="mx-auto max-w-6xl px-4 sm:px-6 py-12 sm:py-20">
+      <section id="faq" className="mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-10">
         <div className="grid gap-8 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4 space-y-8 sm:space-y-10 mb-8 lg:mb-0">
             <div>
@@ -277,7 +277,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-4 sm:px-6 pb-16 sm:pb-24">
+      <section id="contact" className="mx-auto max-w-6xl px-4 sm:px-6 pb-8 sm:pb-12">
         <div className="grid gap-6 md:grid-cols-12">
           <div className="md:col-span-5 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-orange-500 p-6 sm:p-10 flex flex-col justify-between min-h-[280px] sm:min-h-auto">
             <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
