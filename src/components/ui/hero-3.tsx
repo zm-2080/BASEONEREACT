@@ -55,11 +55,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full min-h-[80vh] overflow-hidden bg-[#07090b] flex flex-col items-center justify-center text-center px-4 py-16",
+        "relative w-full min-h-[80vh] overflow-hidden bg-[#07090b] flex flex-col items-center justify-start text-center px-4 pt-16 pb-24",
         className
       )}
     >
-      <div className="z-10 flex flex-col items-center">
+      <div className="z-10 flex flex-col items-center mb-10 sm:mb-12">
         {tagline ? (
           <motion.div
             initial="hidden"
@@ -103,7 +103,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-1/2 md:h-[55%] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+      <div className="absolute bottom-2 sm:bottom-4 left-0 w-full h-1/2 md:h-[55%] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
         <FlickeringGrid
           className="absolute inset-0 z-0"
           squareSize={4}
