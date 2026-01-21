@@ -77,16 +77,6 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             : title}
         </motion.h2>
 
-        <motion.p
-          initial="hidden"
-          animate="show"
-          variants={FADE_IN_ANIMATION_VARIANTS}
-          transition={{ delay: 0.5 }}
-          className="mt-5 max-w-2xl text-base sm:text-lg text-white/70"
-        >
-          {description}
-        </motion.p>
-
         <motion.div
           initial="hidden"
           animate="show"
@@ -97,7 +87,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-1/3 md:h-2/5 [mask-image:linear-gradient(to_bottom,transparent,black_20%,black_80%,transparent)]">
+      <div className="absolute bottom-0 left-0 w-full h-1/2 md:h-[55%] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
         <motion.div
           className="flex gap-4"
           animate={{
@@ -112,7 +102,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           {duplicatedImages.map((src, index) => (
             <div
               key={index}
-              className="relative aspect-[16/10] h-36 md:h-48 flex-shrink-0"
+              className="relative aspect-[16/10] h-52 md:h-64 lg:h-72 flex-shrink-0"
               style={{ rotate: `${index % 2 === 0 ? -2 : 4}deg` }}
             >
               <img
