@@ -75,6 +75,66 @@ export default function Home() {
               </TextBlockAnimation>
             </div>
 
+            {/* Example Sites (early portfolio) */}
+            <div className="w-full">
+              <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
+                <span className="h-px w-8 bg-orange-500"></span>
+                Examples
+              </div>
+
+              {/* Mobile: swipe carousel / Desktop: 2-up */}
+              <div className="grid gap-4 md:grid-cols-2">
+                {[
+                  {
+                    title: "Gold Coast Construction",
+                    meta: "Construction • Example Site",
+                    img: "/Architectural.png",
+                    url: "https://gc-construction-example.vercel.app/",
+                  },
+                  {
+                    title: "Gold Coast Landscaping",
+                    meta: "Landscaping • Example Site",
+                    img: "/new.png",
+                    url: "https://gc-landscaping-example.vercel.app/",
+                  },
+                ].map((site) => (
+                  <a
+                    key={site.title}
+                    href={site.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm">
+                      <div className="p-4 flex items-center justify-between gap-4">
+                        <div>
+                          <div className="text-sm font-semibold text-white group-hover:text-orange-500 transition-colors">
+                            {site.title}
+                          </div>
+                          <div className="text-xs text-white/50">{site.meta}</div>
+                        </div>
+                        <div className="text-xs text-white/40 group-hover:text-white/70 transition-colors">
+                          View live {"->"}
+                        </div>
+                      </div>
+                      <div className="border-t border-white/10">
+                        <img
+                          src={site.img}
+                          alt={site.title}
+                          className="w-full h-auto block transition-transform duration-500 group-hover:scale-[1.01]"
+                        />
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+
+              {/* extra hint on mobile */}
+              <div className="mt-3 text-xs text-white/40 md:hidden">
+                Tap a card to open the live example.
+              </div>
+            </div>
+
             {/* Testimonial Quote */}
             <div className="pl-4 sm:pl-6 lg:pl-8 border-l-2 border-orange-500/50 max-w-3xl">
               <TextBlockAnimation 
