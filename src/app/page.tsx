@@ -31,6 +31,57 @@ export default function Home() {
         className="py-12 sm:py-16"
       />
 
+      {/* Services Overview (inspired layout) */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-[#07090b]">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
+            // Our services
+          </div>
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 sm:mb-12">
+            OUR SERVICES
+          </h2>
+
+          <div className="divide-y divide-white/10 border-t border-white/10">
+            {[
+              {
+                number: "001",
+                title: "Strategy + Structure",
+                description:
+                  "A clear page plan that guides visitors to call, request a quote, or book. No fluff—just the sections that convert.",
+              },
+              {
+                number: "002",
+                title: "Custom Website Design",
+                description:
+                  "A clean, professional design that matches your trade and builds trust fast. Built to look great on phones first.",
+              },
+              {
+                number: "003",
+                title: "Fast Build + Launch",
+                description:
+                  "Live in 3–5 days. Hosting, SSL, and setup done. You approve the final build before it goes live.",
+              },
+              {
+                number: "004",
+                title: "Ongoing Support",
+                description:
+                  "$30/month includes hosting, security, and quick edits so your site stays sharp without headaches.",
+              },
+            ].map((item) => (
+              <div key={item.number} className="grid grid-cols-1 md:grid-cols-12 gap-4 py-6 sm:py-8">
+                <div className="md:col-span-2 text-sm text-white/40">{item.number}</div>
+                <div className="md:col-span-4 text-2xl sm:text-3xl font-semibold text-white">
+                  {item.title}
+                </div>
+                <div className="md:col-span-6 text-sm sm:text-base text-white/60 leading-relaxed">
+                  {item.description}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="mx-auto max-w-7xl pt-2 sm:pt-4 pb-1 sm:pb-2">
         <StackFeatureSection />
       </section>
