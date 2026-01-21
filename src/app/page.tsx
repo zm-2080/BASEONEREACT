@@ -169,8 +169,7 @@ export default function Home() {
               {
                 title: "Gold Coast Landscaping",
                 meta: "Landscape Design • Outdoor Living Spaces",
-                img:
-                  "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
+                img: "/new.png",
                 url: "https://gc-landscaping-example.vercel.app/",
               },
               {
