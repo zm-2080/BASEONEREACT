@@ -10,9 +10,6 @@ export default function PrivacyPolicyPage() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
             Privacy Policy
           </h1>
-          <p className="text-white/60">
-            Current as of: December 2025
-          </p>
         </div>
 
         <div className="mt-10 space-y-8 text-white/80 leading-relaxed">
@@ -96,6 +93,15 @@ export default function PrivacyPolicyPage() {
               ABN: 67 965 178 317
             </p>
           </div>
+        </div>
+
+        <div className="mt-10">
+          <a
+            href="/"
+            className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+          >
+            Back to Home
+          </a>
         </div>
       </section>
     </main>
