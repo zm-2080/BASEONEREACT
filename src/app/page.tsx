@@ -5,6 +5,7 @@ import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
 import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
+import { Gallery4 } from "@/components/ui/gallery4";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 
 export default function Home() {
@@ -75,6 +76,28 @@ export default function Home() {
               </TextBlockAnimation>
             </div>
 
+            {/* Example Sites (early portfolio) */}
+            <Gallery4
+              title="Examples we just shipped"
+              description="Swipe on mobile or click through on desktop to see the live builds."
+              items={[
+                {
+                  id: "construction",
+                  title: "Gold Coast Construction",
+                  description: "Luxury estate build with calm execution and premium finishes.",
+                  href: "https://gc-construction-example.vercel.app/",
+                  image: "/Architectural.png",
+                },
+                {
+                  id: "landscaping",
+                  title: "Gold Coast Landscaping",
+                  description: "Outdoor living site tuned for leads and fast load times.",
+                  href: "https://gc-landscaping-example.vercel.app/",
+                  image: "/new.png",
+                },
+              ]}
+            />
+
             {/* Testimonial Quote */}
             <div className="pl-4 sm:pl-6 lg:pl-8 border-l-2 border-orange-500/50 max-w-3xl">
               <TextBlockAnimation 
@@ -135,69 +158,6 @@ export default function Home() {
             <div className="mt-6 text-center text-sm text-white/60">
               Hover or drag to compare
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="work" className="bg-white text-black py-6 sm:py-10">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 sm:gap-6 mb-8 sm:mb-12">
-            <div>
-              <div className="flex items-center gap-3 text-xs uppercase tracking-widest text-black/60 mb-2">
-                <span className="inline-block h-2 w-2 rounded-full bg-orange-500"></span>
-                Selected Work
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Recent builds</h2>
-            </div>
-            <a
-              href="#contact"
-              className="text-sm font-bold border-b-2 border-orange-500 pb-0.5 hover:text-orange-500 transition-colors"
-            >
-              Get yours built next {"->"}
-            </a>
-          </div>
-
-          <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Gold Coast Construction",
-                meta: "Luxury Estate Construction • Premium Builds",
-                img: "/Architectural.png",
-                url: "https://gc-construction-example.vercel.app/",
-              },
-              {
-                title: "Gold Coast Landscaping",
-                meta: "Landscape Design • Outdoor Living Spaces",
-                img: "/new.png",
-                url: "https://gc-landscaping-example.vercel.app/",
-              },
-              {
-                title: "Coming Soon",
-                meta: "More Projects • Portfolio",
-                img:
-                  "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
-                url: "#contact",
-              },
-            ].map((item) => (
-              <a
-                key={item.title}
-                href={item.url}
-                target={item.url.startsWith("http") ? "_blank" : undefined}
-                rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="group cursor-pointer"
-              >
-                <div className="rounded-2xl sm:rounded-3xl overflow-hidden mb-4 sm:mb-5 border border-black/5 relative">
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.01]"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-                </div>
-                <h3 className="text-base sm:text-lg font-bold group-hover:text-orange-500 transition-colors">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-black/60">{item.meta}</p>
-              </a>
-            ))}
           </div>
         </div>
       </section>
