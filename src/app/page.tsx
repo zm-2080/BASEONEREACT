@@ -160,25 +160,34 @@ export default function Home() {
           <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Project Alpha",
-                meta: "Corporate Consulting • Landing Page",
+                title: "Gold Coast Construction",
+                meta: "Luxury Estate Construction • Premium Builds",
                 img:
                   "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+                url: "https://gc-construction-example.vercel.app/",
               },
               {
-                title: "Studio M",
-                meta: "Creative Agency • Portfolio",
+                title: "Gold Coast Landscaping",
+                meta: "Landscape Design • Outdoor Living Spaces",
                 img:
                   "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80",
+                url: "https://gc-landscaping-example.vercel.app/",
               },
               {
-                title: "TechFlow",
-                meta: "SaaS • Marketing Site",
+                title: "Coming Soon",
+                meta: "More Projects • Portfolio",
                 img:
                   "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
+                url: "#contact",
               },
             ].map((item) => (
-              <div key={item.title} className="group cursor-pointer">
+              <a
+                key={item.title}
+                href={item.url}
+                target={item.url.startsWith("http") ? "_blank" : undefined}
+                rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
+                className="group cursor-pointer"
+              >
                 <div className="aspect-[4/3] rounded-2xl sm:rounded-3xl bg-gray-100 overflow-hidden mb-4 sm:mb-5 border border-black/5 relative">
                   <img
                     src={item.img}
@@ -187,9 +196,9 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
                 </div>
-                <h3 className="text-base sm:text-lg font-bold">{item.title}</h3>
+                <h3 className="text-base sm:text-lg font-bold group-hover:text-orange-500 transition-colors">{item.title}</h3>
                 <p className="text-xs sm:text-sm text-black/60">{item.meta}</p>
-              </div>
+              </a>
             ))}
           </div>
         </div>
