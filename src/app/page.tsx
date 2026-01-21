@@ -7,7 +7,6 @@ import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
 import { Gallery4 } from "@/components/ui/gallery4";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
-import { VerticalImageStack } from "@/components/ui/vertical-image-stack";
 import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
 
 export default function Home() {
@@ -30,46 +29,6 @@ export default function Home() {
           "3-5 Day Turnaround"
         ]}
       />
-
-      {/* Tester Hero Section */}
-      <section className="w-full py-10 sm:py-14 lg:py-20 bg-[#07090b]">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-10 items-center lg:grid-cols-2">
-            <div className="flex flex-col gap-6">
-              <div className="inline-flex items-center gap-3 rounded-full bg-white/5 border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-orange-500">
-                Local Business Web Studio
-              </div>
-              <div className="flex flex-col gap-4">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight text-white">
-                  Websites that win jobs.
-                </h2>
-                <p className="text-lg sm:text-xl text-white/70 leading-relaxed max-w-xl">
-                  Professional, mobile-fast sites for $499. Turn visitors into calls, quote requests, and booked jobs.
-                </p>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  className="inline-flex items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-sm sm:text-base font-semibold text-white hover:bg-orange-600 transition-colors"
-                  onClick={() => {
-                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  Get a quick quote
-                </button>
-                <button
-                  className="inline-flex items-center justify-center rounded-xl border border-white/20 px-6 py-3 text-sm sm:text-base font-semibold text-white hover:bg-white/10 transition-colors"
-                  onClick={() => {
-                    document.getElementById("examples")?.scrollIntoView({ behavior: "smooth" });
-                  }}
-                >
-                  View recent sites
-                </button>
-              </div>
-            </div>
-            <VerticalImageStack />
-          </div>
-        </div>
-      </section>
 
       {/* Dummy Marquee Hero Section */}
       <AnimatedMarqueeHero
