@@ -57,9 +57,9 @@ export default function Home() {
                 stagger={0.05}
               >
                 <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-white/80 font-light">
-                  Your competitors have better websites. That&apos;s why they&apos;re getting the quotes you should be winning. 
-                  We build <strong className="text-white font-semibold">professional, mobile-fast sites</strong> that make your business look 
-                  as good as your work.
+                  You already do great work. Your website should reflect that — and help you win more quotes.
+                  We build <strong className="text-white font-semibold">clean, professional, mobile-fast websites</strong> that make it easy for
+                  customers to trust you, contact you, and request a quote.
                 </p>
               </TextBlockAnimation>
 
@@ -69,9 +69,9 @@ export default function Home() {
                 stagger={0.06}
               >
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/70">
-                  No agency bloat. No confusing contracts. Just a <strong className="text-orange-500 font-semibold">$499 custom website</strong> and 
-                  <strong className="text-orange-500 font-semibold"> $30/month</strong> for hosting, security, and quick edits. 
-                  Live in 3-5 days.
+                  No agency bloat. No confusing contracts. Just a <strong className="text-orange-500 font-semibold">$499 custom website</strong> and
+                  <strong className="text-orange-500 font-semibold"> $30/month</strong> for hosting, security, and quick edits.
+                  Live in 3-5 days. No surprises. No headaches.
                 </p>
               </TextBlockAnimation>
             </div>
@@ -80,7 +80,7 @@ export default function Home() {
             <div id="examples">
               <Gallery4
                 title="Examples we just shipped"
-                description="Swipe on mobile or click through on desktop to see the live builds."
+                description="Designed specifically for local service businesses. Swipe on mobile or click through on desktop to see the live builds."
                 items={[
                   {
                     id: "construction",

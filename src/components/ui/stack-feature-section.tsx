@@ -70,17 +70,17 @@ export default function StackFeatureSection() {
               document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            Get Started
+            Get a quick quote
           </Button>
           <Button
             variant="outline"
             size="lg"
             className="border-white/30 text-white hover:bg-white/10 text-lg sm:text-xl px-8 sm:px-10 py-6 sm:py-7 font-semibold"
             onClick={() => {
-              document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("examples")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            View Portfolio
+            View recent sites
           </Button>
         </div>
       </div>

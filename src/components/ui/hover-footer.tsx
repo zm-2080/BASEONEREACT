@@ -164,7 +164,7 @@ export default function HoverFooter() {
         { label: "FAQ", href: "#faq" },
         { label: "Portfolio", href: "#work" },
         {
-          label: "Get Started",
+          label: "Get a quick quote",
           href: "#contact",
           pulse: true,
         },
