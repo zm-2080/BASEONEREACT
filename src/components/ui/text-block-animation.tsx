@@ -85,7 +85,7 @@ export default function TextBlockAnimation({
         });
 
         // 4. Build the Animation Sequence
-        // Step A: Scale Block 0 -> 1 (Left to Right)
+        // Step A: Scale Block 0 → 1 (Left to Right)
         tl.to(blocks, {
             scaleX: 1,
             duration: duration,
@@ -97,7 +97,7 @@ export default function TextBlockAnimation({
             opacity: 1,
             stagger: stagger
         }, `<${duration / 2}`) // Start revealing halfway through the block expansion
-        // Step C: Scale Block 1 -> 0 (Left to Right)
+        // Step C: Scale Block 1 → 0 (Left to Right)
         .to(blocks, {
             scaleX: 0,
             duration: duration,

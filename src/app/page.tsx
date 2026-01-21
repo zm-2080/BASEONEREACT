@@ -293,7 +293,7 @@ export default function Home() {
                 type="submit"
                 className="mt-5 sm:mt-6 w-full rounded-xl bg-white text-black py-3 sm:py-4 font-bold text-sm hover:bg-gray-200 transition-colors"
               >
-                Send Enquiry {"->"}
+                Send Enquiry →
               </button>
             </form>
           </div>

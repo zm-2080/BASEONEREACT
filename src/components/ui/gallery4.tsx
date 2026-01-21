@@ -148,7 +148,7 @@ const Gallery4 = ({
                       {item.description}
                     </div>
                     <div className="text-xs text-white/50 group-hover:text-white/80 transition-colors mt-1">
-                      View live {"->"}
+                      View live →
                     </div>
                   </div>
                 </div>
