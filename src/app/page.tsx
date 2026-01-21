@@ -20,7 +20,7 @@ export default function Home() {
           document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
         }}
         onSecondaryCtaClick={() => {
-          document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+          document.getElementById("examples")?.scrollIntoView({ behavior: "smooth" });
         }}
         features={[
           "$499 Build",
@@ -77,33 +77,35 @@ export default function Home() {
             </div>
 
             {/* Example Sites (early portfolio) */}
-            <Gallery4
-              title="Examples we just shipped"
-              description="Swipe on mobile or click through on desktop to see the live builds."
-              items={[
-                {
-                  id: "construction",
-                  title: "Gold Coast Construction",
-                  description: "Luxury estate build with calm execution and premium finishes.",
-                  href: "https://gc-construction-example.vercel.app/",
-                  image: "/Architectural.png",
-                },
-                {
-                  id: "landscaping",
-                  title: "Gold Coast Landscaping",
-                  description: "Outdoor living site tuned for leads and fast load times.",
-                  href: "https://gc-landscaping-example.vercel.app/",
-                  image: "/new.png",
-                },
-                {
-                  id: "electrical",
-                  title: "Gold Coast Electrical",
-                  description: "Quietly excellent electrical with clean compliance and tidy installs.",
-                  href: "https://gc-electrical-example.vercel.app/",
-                  image: "/Electrical.png",
-                },
-              ]}
-            />
+            <div id="examples">
+              <Gallery4
+                title="Examples we just shipped"
+                description="Swipe on mobile or click through on desktop to see the live builds."
+                items={[
+                  {
+                    id: "construction",
+                    title: "Gold Coast Construction",
+                    description: "Luxury estate build with calm execution and premium finishes.",
+                    href: "https://gc-construction-example.vercel.app/",
+                    image: "/Architectural.png",
+                  },
+                  {
+                    id: "landscaping",
+                    title: "Gold Coast Landscaping",
+                    description: "Outdoor living site tuned for leads and fast load times.",
+                    href: "https://gc-landscaping-example.vercel.app/",
+                    image: "/new.png",
+                  },
+                  {
+                    id: "electrical",
+                    title: "Gold Coast Electrical",
+                    description: "Quietly excellent electrical with clean compliance and tidy installs.",
+                    href: "https://gc-electrical-example.vercel.app/",
+                    image: "/Electrical.png",
+                  },
+                ]}
+              />
+            </div>
 
             {/* Testimonial Quote */}
             <div className="pl-4 sm:pl-6 lg:pl-8 border-l-2 border-orange-500/50 max-w-3xl">
