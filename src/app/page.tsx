@@ -8,6 +8,7 @@ import HoverFooter from "@/components/ui/hover-footer";
 import { Gallery4 } from "@/components/ui/gallery4";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 import { VerticalImageStack } from "@/components/ui/vertical-image-stack";
+import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
 
 export default function Home() {
   return (
@@ -69,6 +70,29 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Dummy Marquee Hero Section */}
+      <AnimatedMarqueeHero
+        tagline="Built for local service businesses"
+        title={
+          <>
+            Websites that look the part.
+            <br />
+            And win more jobs.
+          </>
+        }
+        description="Showcase your work with clean, professional websites that turn visitors into calls, quote requests, and booked jobs."
+        ctaText="View recent sites"
+        images={[
+          "/Architectural.png",
+          "/new.png",
+          "/Electrical.png",
+          "/Architectural.png",
+          "/new.png",
+          "/Electrical.png",
+        ]}
+        className="py-12 sm:py-16"
+      />
 
       {/* Text Block Animation Section */}
       <section className="w-full py-8 sm:py-12 lg:py-16 bg-[#07090b] relative overflow-hidden">
