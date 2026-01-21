@@ -4,11 +4,20 @@ import gsap from "gsap"
 import { SplitText } from "gsap/SplitText"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from "@gsap/react"
-import { useRef } from "react"
+import { useRef, ReactNode } from "react"
 import { cn } from "@/lib/utils";
 
 // Ensure plugins are registered
 gsap.registerPlugin(SplitText, ScrollTrigger);
+
+interface TextBlockAnimationProps {
+    children: ReactNode;
+    animateOnScroll?: boolean;
+    delay?: number;
+    blockColor?: string;
+    stagger?: number;
+    duration?: number;
+}
 
 export default function TextBlockAnimation({
     children,
@@ -17,7 +26,7 @@ export default function TextBlockAnimation({
     blockColor = "#000",
     stagger = 0.1, // Reduced for smoother flow
     duration = 0.6 // Slightly faster for snappiness
-}) {
+}: TextBlockAnimationProps) {
     const containerRef = useRef<HTMLDivElement>(null);
 
     useGSAP(() => {
