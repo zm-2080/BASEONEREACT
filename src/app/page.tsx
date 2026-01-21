@@ -135,6 +135,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-[#07090b]">
+        <div className="mx-auto max-w-6xl">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
+            <div>
+              <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">
+                // Pricing
+              </div>
+              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
+                CLEAR AND
+                <br />
+                SIMPLE PRICING
+              </h2>
+            </div>
+            <p className="text-white/60 max-w-md text-sm sm:text-base leading-relaxed">
+              One build price, one monthly support plan. No hidden fees, no surprise invoices.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
+              <div className="text-sm uppercase tracking-widest text-white/40 mb-3">Build</div>
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">$499</div>
+              <p className="text-white/60 mb-6">One-time custom website build.</p>
+              <ul className="space-y-3 text-sm text-white/70">
+                <li>Custom design for your trade</li>
+                <li>5 pages built to convert</li>
+                <li>Mobile-first performance</li>
+                <li>Live in 3–5 days</li>
+              </ul>
+              <button
+                className="mt-6 w-full rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Get a quick quote
+              </button>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
+              <div className="text-sm uppercase tracking-widest text-white/40 mb-3">Maintenance</div>
+              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">$30</div>
+              <p className="text-white/60 mb-6">Monthly hosting + support.</p>
+              <ul className="space-y-3 text-sm text-white/70">
+                <li>Secure hosting + SSL</li>
+                <li>Basic updates and edits</li>
+                <li>Backups + monitoring</li>
+                <li>Cancel anytime</li>
+              </ul>
+              <button
+                className="mt-6 w-full rounded-xl border border-white/20 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Start maintenance
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 pb-6 sm:pb-10">
         <div className="text-center mb-6 sm:mb-8">
           <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
