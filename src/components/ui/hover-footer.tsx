@@ -162,7 +162,8 @@ export default function HoverFooter() {
       title: "Resources",
       links: [
         { label: "FAQ", href: "#faq" },
-        { label: "Portfolio", href: "#work" },
+        { label: "Portfolio", href: "#examples" },
+        { label: "Privacy Policy", href: "/privacy" },
         {
           label: "Get a quick quote",
           href: "#contact",
