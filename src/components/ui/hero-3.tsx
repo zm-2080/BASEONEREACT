@@ -81,6 +81,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
       </div>
 
       <div className="relative z-10 w-full h-full px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-16 flex flex-col">
+        <div className="w-full text-left mb-6">
+          <span className="block text-white font-bold tracking-tight text-[12vw] leading-none">
+            BASE ONE
+          </span>
+        </div>
         <div className="space-y-3 text-left">
           {tagline ? (
             <motion.div
