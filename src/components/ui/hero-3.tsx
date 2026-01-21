@@ -8,16 +8,26 @@ import { FlickeringGrid } from "@/components/ui/flickering-grid-hero";
 interface AnimatedMarqueeHeroProps {
   tagline?: string;
   title: React.ReactNode;
+  subheadline?: string;
   description: string;
   ctaText: string;
+  trustItems?: string[];
+  onCtaClick?: () => void;
   images: string[];
   className?: string;
 }
 
-const ActionButton = ({ children }: { children: React.ReactNode }) => (
+const ActionButton = ({
+  children,
+  onClick,
+}: {
+  children: React.ReactNode;
+  onClick?: () => void;
+}) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
+    onClick={onClick}
     className="px-6 sm:px-8 py-3 rounded-full bg-orange-500 text-white font-semibold shadow-lg transition-colors hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75"
   >
     {children}
@@ -27,8 +37,11 @@ const ActionButton = ({ children }: { children: React.ReactNode }) => (
 export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   tagline,
   title,
+  subheadline,
   description,
   ctaText,
+  trustItems = [],
+  onCtaClick,
   images,
   className,
 }) => {
@@ -81,12 +94,15 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
       </div>
 
       <div className="relative z-10 w-full h-full px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-16 flex flex-col">
-        <div className="-mx-4 sm:-mx-6 lg:-mx-10 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+5rem)] text-left mb-4">
-          <span className="block text-white font-bold tracking-tight text-[18vw] leading-none whitespace-nowrap">
-            BASE ONE
+        {/* Top-left brand */}
+        <div className="text-left mb-6">
+          <span className="text-xs uppercase tracking-[0.35em] text-white/50">
+            {tagline ?? "Base One"}
           </span>
         </div>
-        <div className="space-y-3 text-left">
+
+        {/* Main headline */}
+        <div className="text-left space-y-3">
           <motion.h1
             initial="hidden"
             animate="show"
@@ -98,7 +114,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 },
               },
             }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05] max-w-[26ch]"
+            className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] font-bold tracking-tight text-white leading-[0.95] max-w-[14ch]"
           >
             {typeof title === "string"
               ? title.split(" ").map((word, i) => (
@@ -108,9 +124,20 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 ))
               : title}
           </motion.h1>
+          {subheadline ? (
+            <motion.p
+              initial="hidden"
+              animate="show"
+              variants={FADE_IN_ANIMATION_VARIANTS}
+              transition={{ delay: 0.2 }}
+              className="text-base sm:text-lg text-white/70 max-w-xl"
+            >
+              {subheadline}
+            </motion.p>
+          ) : null}
         </div>
 
-        {/* Marquee images between title and bottom-left text */}
+        {/* Carousel band across the center */}
         <div className="mt-8 sm:mt-10 lg:mt-12 -mx-4 sm:-mx-6 lg:-mx-10">
           <div className="relative w-full overflow-hidden">
             <motion.div
@@ -141,25 +168,27 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           </div>
         </div>
 
-        {/* Bottom-left copy */}
-        <div className="mt-auto max-w-md space-y-4 text-white/70 text-left">
+        {/* Bottom row */}
+        <div className="mt-auto w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 text-white/70">
           <motion.p
             initial="hidden"
             animate="show"
             variants={FADE_IN_ANIMATION_VARIANTS}
-            transition={{ delay: 0.4 }}
-            className="text-sm sm:text-base leading-relaxed"
+            transition={{ delay: 0.3 }}
+            className="text-sm sm:text-base leading-relaxed max-w-md text-left"
           >
             {description}
           </motion.p>
-          <motion.div
-            initial="hidden"
-            animate="show"
-            variants={FADE_IN_ANIMATION_VARIANTS}
-            transition={{ delay: 0.5 }}
-          >
-            <ActionButton>{ctaText}</ActionButton>
-          </motion.div>
+          <div className="flex flex-col items-start md:items-end gap-3">
+            {trustItems.length ? (
+              <div className="text-xs sm:text-sm text-white/60 text-left md:text-right space-y-1">
+                {trustItems.map((item) => (
+                  <div key={item}>{item}</div>
+                ))}
+              </div>
+            ) : null}
+            <ActionButton onClick={onCtaClick}>{ctaText}</ActionButton>
+          </div>
         </div>
       </div>
     </section>

@@ -14,11 +14,16 @@ export default function Home() {
       <AnimatedMarqueeHero
         title={
           <>
-            Websites that win jobs.
+            BASE ONE
           </>
         }
-        description="Professional, mobile-fast sites for $499. Turn visitors into calls, quote requests, and booked jobs."
+        subheadline="Websites that win jobs."
+        description="You already do great work. We help you look credible online and turn more visitors into quote requests — without the headaches."
+        trustItems={["★★★★★ 4.8/5", "Avg 3.2x more quote requests", "Live in 3–5 days"]}
         ctaText="Start your project"
+        onCtaClick={() => {
+          document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+        }}
         images={[
           "/Architectural.png",
           "/new.png",
