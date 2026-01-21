@@ -186,15 +186,6 @@ export default function HoverFooter() {
     },
   ];
 
-  // Social media icons
-  const socialLinks = [
-    { icon: <FaFacebook size={20} />, label: "Facebook", href: "#" },
-    { icon: <FaInstagram size={20} />, label: "Instagram", href: "#" },
-    { icon: <FaTwitter size={20} />, label: "Twitter", href: "#" },
-    { icon: <FaLinkedin size={20} />, label: "LinkedIn", href: "#" },
-    { icon: <FaGlobe size={20} />, label: "Website", href: "#" },
-  ];
-
   return (
     <footer className="bg-[#0F0F11]/10 relative h-fit rounded-3xl overflow-hidden m-8">
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
@@ -265,23 +256,8 @@ export default function HoverFooter() {
         <hr className="border-t border-white/10 my-8" />
 
         {/* Footer bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-sm space-y-4 md:space-y-0">
-          {/* Social icons */}
-          <div className="flex space-x-6 text-white/40">
-            {socialLinks.map(({ icon, label, href }) => (
-              <a
-                key={label}
-                href={href}
-                aria-label={label}
-                className="hover:text-[#f97316] transition-colors"
-              >
-                {icon}
-              </a>
-            ))}
-          </div>
-
-          {/* Copyright */}
-          <p className="text-center md:text-left text-white/60">
+        <div className="flex justify-center text-sm">
+          <p className="text-center text-white/60">
             &copy; {new Date().getFullYear()} Base One. All rights reserved.
           </p>
         </div>
