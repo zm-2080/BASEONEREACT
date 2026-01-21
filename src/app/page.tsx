@@ -12,7 +12,6 @@ export default function Home() {
     <main className="bg-[#07090b] text-white">
       {/* Dummy Marquee Hero Section */}
       <AnimatedMarqueeHero
-        tagline="Base One"
         title={
           <>
             Websites that win jobs.

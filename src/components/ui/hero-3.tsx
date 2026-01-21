@@ -81,23 +81,12 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
       </div>
 
       <div className="relative z-10 w-full h-full px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-16 flex flex-col">
-        <div className="w-full text-left mb-6">
-          <span className="block text-white font-bold tracking-tight text-[12vw] leading-none">
+        <div className="-mx-4 sm:-mx-6 lg:-mx-10 w-[calc(100%+2rem)] sm:w-[calc(100%+3rem)] lg:w-[calc(100%+5rem)] text-left mb-4">
+          <span className="block text-white font-bold tracking-tight text-[18vw] leading-none whitespace-nowrap">
             BASE ONE
           </span>
         </div>
         <div className="space-y-3 text-left">
-          {tagline ? (
-            <motion.div
-              initial="hidden"
-              animate="show"
-              variants={FADE_IN_ANIMATION_VARIANTS}
-              className="text-xs uppercase tracking-[0.3em] text-white/60"
-            >
-              {tagline}
-            </motion.div>
-          ) : null}
-
           <motion.h1
             initial="hidden"
             animate="show"
@@ -109,7 +98,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
                 },
               },
             }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[0.95] max-w-[18ch]"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.05] max-w-[26ch]"
           >
             {typeof title === "string"
               ? title.split(" ").map((word, i) => (
