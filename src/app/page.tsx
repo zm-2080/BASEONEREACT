@@ -186,11 +186,11 @@ export default function Home() {
                 rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
                 className="group cursor-pointer"
               >
-                <div className="aspect-[16/10] rounded-2xl sm:rounded-3xl bg-gray-100 overflow-hidden mb-4 sm:mb-5 border border-black/5 relative">
+                <div className="rounded-2xl sm:rounded-3xl overflow-hidden mb-4 sm:mb-5 border border-black/5 relative">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-contain bg-white transition-transform duration-700 group-hover:scale-[1.02]"
+                    className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.01]"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
                 </div>
