@@ -103,7 +103,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </motion.div>
       </div>
 
-      <div className="absolute bottom-2 sm:bottom-4 left-0 w-full h-1/2 md:h-[55%] [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+      <div className="absolute bottom-2 sm:bottom-4 left-0 w-full h-1/2 md:h-[55%]">
         <FlickeringGrid
           className="absolute inset-0 z-0"
           squareSize={4}
