@@ -13,15 +13,14 @@ export default function Home() {
     <main className="bg-[#07090b] text-white">
       {/* Dummy Marquee Hero Section */}
       <AnimatedMarqueeHero
+        tagline="Base One"
         title={
           <>
-            Websites that look the part.
-            <br />
-            And win more jobs.
+            Websites that win jobs.
           </>
         }
-        description="Showcase your work with clean, professional websites that turn visitors into calls, quote requests, and booked jobs."
-        ctaText="View recent sites"
+        description="Professional, mobile-fast sites for $499. Turn visitors into calls, quote requests, and booked jobs."
+        ctaText="Start your project"
         images={[
           "/Architectural.png",
           "/new.png",
