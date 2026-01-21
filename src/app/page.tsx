@@ -95,6 +95,13 @@ export default function Home() {
                   href: "https://gc-landscaping-example.vercel.app/",
                   image: "/new.png",
                 },
+                {
+                  id: "electrical",
+                  title: "Gold Coast Electrical",
+                  description: "Quietly excellent electrical with clean compliance and tidy installs.",
+                  href: "https://gc-electrical-example.vercel.app/",
+                  image: "/Electrical.png",
+                },
               ]}
             />
 
