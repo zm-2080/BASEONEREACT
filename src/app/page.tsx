@@ -85,7 +85,7 @@ export default function Home() {
                   &quot;Best investment I made for my business this year. Simple process, great result, and I finally look professional online.&quot;
                 </p>
                 <p className="mt-4 text-sm sm:text-base text-white/50 font-medium">
-                  — Local Business Owner
+                  — Sarah Mitchell, GC Landscaping
                 </p>
               </TextBlockAnimation>
             </div>
