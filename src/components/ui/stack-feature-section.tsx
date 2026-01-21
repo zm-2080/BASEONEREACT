@@ -48,7 +48,7 @@ export default function StackFeatureSection() {
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
-        <section className="relative max-w-6xl mx-auto my-16 sm:my-24 md:my-32 px-4 sm:px-6 md:pl-10 flex flex-col md:flex-row items-center justify-between min-h-[35rem] md:min-h-[40rem] border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden rounded-2xl sm:rounded-3xl">
+        <section className="relative max-w-6xl mx-auto my-16 sm:my-24 md:my-24 px-4 sm:px-6 md:pl-10 flex flex-col md:flex-row items-center justify-between min-h-[35rem] md:min-h-[40rem] border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden rounded-2xl sm:rounded-3xl">
       {/* Left side: Heading and Text */}
       <div className="w-full md:w-1/2 z-10 py-8 md:py-0">
         <div className="flex items-center gap-3 text-sm sm:text-base uppercase tracking-widest text-white/50 mb-6">
