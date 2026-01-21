@@ -32,7 +32,6 @@ export default function Home() {
 
       {/* Dummy Marquee Hero Section */}
       <AnimatedMarqueeHero
-        tagline="Built for local service businesses"
         title={
           <>
             Websites that look the part.

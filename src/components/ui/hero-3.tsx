@@ -5,7 +5,7 @@ import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface AnimatedMarqueeHeroProps {
-  tagline: string;
+  tagline?: string;
   title: React.ReactNode;
   description: string;
   ctaText: string;
@@ -46,14 +46,16 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
       )}
     >
       <div className="z-10 flex flex-col items-center">
-        <motion.div
-          initial="hidden"
-          animate="show"
-          variants={FADE_IN_ANIMATION_VARIANTS}
-          className="mb-4 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm"
-        >
-          {tagline}
-        </motion.div>
+        {tagline ? (
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={FADE_IN_ANIMATION_VARIANTS}
+            className="mb-4 inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/70 backdrop-blur-sm"
+          >
+            {tagline}
+          </motion.div>
+        ) : null}
 
         <motion.h2
           initial="hidden"
