@@ -43,11 +43,11 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
 
   const maskStyle = {
     WebkitMaskImage: `url('${LOGO_BASE64}')`,
-    WebkitMaskSize: "90vw",
+    WebkitMaskSize: "120vw",
     WebkitMaskPosition: "center",
     WebkitMaskRepeat: "no-repeat",
     maskImage: `url('${LOGO_BASE64}')`,
-    maskSize: "90vw",
+    maskSize: "120vw",
     maskPosition: "center",
     maskRepeat: "no-repeat",
   } as const;
@@ -55,11 +55,32 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
   return (
     <section
       className={cn(
-        "relative w-full min-h-[80vh] overflow-hidden bg-[#07090b] flex flex-col items-center justify-start text-center px-4 pt-16 pb-24",
+        "relative w-full h-screen overflow-hidden bg-[#07090b] flex flex-col items-center justify-start text-center px-4 pt-16 pb-24",
         className
       )}
     >
-      <div className="z-10 flex flex-col items-center mb-10 sm:mb-12">
+      {/* Full-screen flickering grid with B1 mask */}
+      <div className="absolute inset-0 z-0">
+        <FlickeringGrid
+          className="absolute inset-0"
+          squareSize={4}
+          gridGap={4}
+          flickerChance={0.12}
+          color="rgb(249, 115, 22)"
+          maxOpacity={0.18}
+        />
+        <div className="absolute inset-0 opacity-80" style={maskStyle}>
+          <FlickeringGrid
+            squareSize={3}
+            gridGap={6}
+            flickerChance={0.16}
+            color="rgb(255, 255, 255)"
+            maxOpacity={0.45}
+          />
+        </div>
+      </div>
+
+      <div className="relative z-10 flex flex-col items-center mb-10 sm:mb-12">
         {tagline ? (
           <motion.div
             initial="hidden"
@@ -103,24 +124,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </motion.div>
       </div>
 
-      <div className="absolute bottom-2 sm:bottom-4 left-0 w-full h-1/2 md:h-[55%]">
-        <FlickeringGrid
-          className="absolute inset-0 z-0"
-          squareSize={4}
-          gridGap={4}
-          flickerChance={0.12}
-          color="rgb(249, 115, 22)"
-          maxOpacity={0.18}
-        />
-        <div className="absolute inset-0 z-0 opacity-80" style={maskStyle}>
-          <FlickeringGrid
-            squareSize={3}
-            gridGap={6}
-            flickerChance={0.16}
-            color="rgb(255, 255, 255)"
-            maxOpacity={0.45}
-          />
-        </div>
+      <div className="absolute bottom-2 sm:bottom-4 left-0 w-full h-[45%] md:h-[50%]">
         <motion.div
           className="relative z-10 flex gap-4"
           animate={{
