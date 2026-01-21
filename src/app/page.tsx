@@ -5,7 +5,6 @@ import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
 import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
-import { Gallery4 } from "@/components/ui/gallery4";
 import TextBlockAnimation from "@/components/ui/text-block-animation";
 
 export default function Home() {
@@ -75,28 +74,6 @@ export default function Home() {
                 </p>
               </TextBlockAnimation>
             </div>
-
-            {/* Example Sites (early portfolio) */}
-            <Gallery4
-              title="Examples we just shipped"
-              description="Swipe on mobile or click through on desktop to see the live builds."
-              items={[
-                {
-                  id: "construction",
-                  title: "Gold Coast Construction",
-                  description: "Luxury estate build with calm execution and premium finishes.",
-                  href: "https://gc-construction-example.vercel.app/",
-                  image: "/Architectural.png",
-                },
-                {
-                  id: "landscaping",
-                  title: "Gold Coast Landscaping",
-                  description: "Outdoor living site tuned for leads and fast load times.",
-                  href: "https://gc-landscaping-example.vercel.app/",
-                  image: "/new.png",
-                },
-              ]}
-            />
 
             {/* Testimonial Quote */}
             <div className="pl-4 sm:pl-6 lg:pl-8 border-l-2 border-orange-500/50 max-w-3xl">
