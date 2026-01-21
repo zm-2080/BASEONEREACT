@@ -5,7 +5,6 @@ import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
 import { Gallery4 } from "@/components/ui/gallery4";
-import TextBlockAnimation from "@/components/ui/text-block-animation";
 import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
 
 export default function Home() {
@@ -31,102 +30,6 @@ export default function Home() {
         ]}
         className="py-12 sm:py-16"
       />
-
-      {/* Text Block Animation Section */}
-      <section className="w-full py-8 sm:py-12 lg:py-16 bg-[#07090b] relative overflow-hidden">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16 sm:space-y-20">
-            {/* Main Headline */}
-            <div className="max-w-5xl">
-              <TextBlockAnimation
-                blockColor="#f97316"
-                animateOnScroll={true}
-                delay={0.1}
-                duration={0.7}
-                stagger={0.08}
-              >
-                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-tight text-white">
-                  Stop losing quotes.<br />
-                  <span className="text-orange-500">Start winning jobs.</span>
-                </h2>
-              </TextBlockAnimation>
-            </div>
-
-            {/* Value Proposition */}
-            <div className="max-w-4xl space-y-8">
-              <TextBlockAnimation 
-                blockColor="#07090b" 
-                duration={0.6}
-                stagger={0.05}
-              >
-                <p className="text-lg sm:text-xl md:text-2xl leading-relaxed text-white/80 font-light">
-                  You already do great work. Your website should reflect that — and help you win more quotes.
-                  We build <strong className="text-white font-semibold">clean, professional, mobile-fast websites</strong> that make it easy for
-                  customers to trust you, contact you, and request a quote.
-                </p>
-              </TextBlockAnimation>
-
-              <TextBlockAnimation 
-                blockColor="#f97316" 
-                duration={0.65}
-                stagger={0.06}
-              >
-                <p className="text-base sm:text-lg md:text-xl leading-relaxed text-white/70">
-                  No agency bloat. No confusing contracts. Just a <strong className="text-orange-500 font-semibold">$499 custom website</strong> and
-                  <strong className="text-orange-500 font-semibold"> $30/month</strong> for hosting, security, and quick edits.
-                  Live in 3-5 days. No surprises. No headaches.
-                </p>
-              </TextBlockAnimation>
-            </div>
-
-            {/* Example Sites (early portfolio) */}
-            <div id="examples">
-              <Gallery4
-                title="Examples we just shipped"
-                description="Designed specifically for local service businesses. Swipe on mobile or click through on desktop to see the live builds."
-                items={[
-                  {
-                    id: "construction",
-                    title: "Gold Coast Construction",
-                    description: "Luxury estate build with calm execution and premium finishes.",
-                    href: "https://gc-construction-example.vercel.app/",
-                    image: "/Architectural.png",
-                  },
-                  {
-                    id: "landscaping",
-                    title: "Gold Coast Landscaping",
-                    description: "Outdoor living site tuned for leads and fast load times.",
-                    href: "https://gc-landscaping-example.vercel.app/",
-                    image: "/new.png",
-                  },
-                  {
-                    id: "electrical",
-                    title: "Gold Coast Electrical",
-                    description: "Quietly excellent electrical with clean compliance and tidy installs.",
-                    href: "https://gc-electrical-example.vercel.app/",
-                    image: "/Electrical.png",
-                  },
-                ]}
-              />
-            </div>
-
-            {/* Testimonial Quote */}
-            <div className="pl-4 sm:pl-6 lg:pl-8 border-l-2 border-orange-500/50 max-w-3xl">
-              <TextBlockAnimation 
-                blockColor="#07090b" 
-                duration={0.6}
-              >
-                <p className="text-base sm:text-lg md:text-xl italic text-white/60 leading-relaxed">
-                  &quot;Best investment I made for my business this year. Simple process, great result, and I finally look professional online.&quot;
-                </p>
-                <p className="mt-4 text-sm sm:text-base text-white/50 font-medium">
-                  — Sarah Mitchell, GC Landscaping
-                </p>
-              </TextBlockAnimation>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section id="services" className="mx-auto max-w-7xl pt-2 sm:pt-4 pb-1 sm:pb-2">
         <StackFeatureSection />
