@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import LiquidMetalHero from "@/components/ui/liquid-metal-hero";
 import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
@@ -12,24 +11,6 @@ import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
 export default function Home() {
   return (
     <main className="bg-[#07090b] text-white">
-      <LiquidMetalHero
-        title="Websites that win jobs."
-        subtitle="Professional, mobile-fast sites for $499. Stop losing quotes to competitors with better websites. No bloat, just leads."
-        primaryCtaLabel="Request Proposal"
-        secondaryCtaLabel="View Portfolio"
-        onPrimaryCtaClick={() => {
-          document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-        }}
-        onSecondaryCtaClick={() => {
-          document.getElementById("examples")?.scrollIntoView({ behavior: "smooth" });
-        }}
-        features={[
-          "$499 Build",
-          "$30/mo Support",
-          "3-5 Day Turnaround"
-        ]}
-      />
-
       {/* Dummy Marquee Hero Section */}
       <AnimatedMarqueeHero
         title={
