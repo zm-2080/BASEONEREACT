@@ -152,7 +152,9 @@ const fragmentShader = `
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
     vec4 base = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
     vec3 orange = vec3(0.98, 0.45, 0.10);
-    vec3 color = mix(base.rgb, orange, 0.35);
+    vec3 blue = vec3(0.20, 0.45, 0.95);
+    vec3 tint = mix(orange, blue, 0.35);
+    vec3 color = mix(base.rgb, tint, 0.65);
     gl_FragColor = vec4(color, 1.0);
   }
 `;
@@ -224,7 +226,7 @@ function ShaderBackground() {
       >
         <ShaderPlane />
       </Canvas>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#f97316]/25 via-transparent to-[#60a5fa]/20" />
     </div>
   );
 }
