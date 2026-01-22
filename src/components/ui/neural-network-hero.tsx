@@ -153,8 +153,7 @@ export default function Hero({
 
       {/* Large BASE ONE text in top left */}
       <div className="absolute top-8 left-8 z-20 text-[12vw] sm:text-[10vw] md:text-[8vw] font-bold leading-none tracking-tighter text-transparent" style={{
-        WebkitTextStroke: '2px rgb(147, 51, 234)',
-        textStroke: '2px rgb(147, 51, 234)'
+        WebkitTextStroke: '2px rgb(147, 51, 234)'
       }}>
         BASE ONE
       </div>
