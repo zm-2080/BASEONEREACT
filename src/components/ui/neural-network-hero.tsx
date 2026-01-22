@@ -150,24 +150,24 @@ export default function Hero({
   );
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden bg-white">
+    <section ref={sectionRef} className="relative min-h-screen w-screen overflow-hidden bg-white">
       <FlickeringGridBackground />
 
       {/* Large BASE ONE text in top left */}
-      <div className="absolute top-8 left-8 z-20 text-[12vw] sm:text-[10vw] md:text-[8vw] font-bold leading-none tracking-tighter text-transparent" style={{
+      <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-8 md:left-8 z-20 text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[5vw] font-bold leading-none tracking-tighter text-transparent" style={{
         WebkitTextStroke: '2px rgb(147, 51, 234)'
       }}>
         BASE ONE
       </div>
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 gap-8 items-center px-6 pb-24 pt-36 sm:pt-44 md:px-10 lg:px-16 z-10 h-full">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between gap-8 px-6 py-24 md:px-10 lg:px-16 z-10 min-h-screen">
         {/* Left Column - Text Content */}
-        <div className="flex flex-col items-start gap-6 sm:gap-8">
-          <h1 ref={headerRef} className="text-left text-5xl font-extralight leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl">
+        <div className="flex flex-col items-start gap-6 sm:gap-8 max-w-2xl lg:max-w-xl">
+          <h1 ref={headerRef} className="text-left text-4xl sm:text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tight text-black">
             {title}
           </h1>
 
-          <p ref={paraRef} className="text-left text-base font-light leading-relaxed tracking-tight text-black/75 sm:text-lg">
+          <p ref={paraRef} className="text-left text-base sm:text-lg font-light leading-relaxed tracking-tight text-black/75 max-w-xl">
             {description}
           </p>
 
@@ -201,9 +201,9 @@ export default function Hero({
         </div>
 
         {/* Right Column - Example Website Images */}
-        <div className="hidden lg:flex items-center justify-end">
+        <div className="hidden lg:block flex-shrink-0">
           <AnimatedGroup
-            className="grid grid-cols-1 gap-6 w-full max-w-lg"
+            className="grid grid-cols-1 gap-4 w-[420px] xl:w-[480px]"
             preset="blur-slide"
           >
             <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
