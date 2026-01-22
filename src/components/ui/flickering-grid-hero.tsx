@@ -1,7 +1,15 @@
 "use client";
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+import { clsx, type ClassValue } from "clsx"
+import { twMerge } from "tailwind-merge"
+
 
 interface FlickeringGridProps extends React.HTMLAttributes<HTMLDivElement> {
   squareSize?: number;
@@ -13,6 +21,11 @@ interface FlickeringGridProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
   maxOpacity?: number;
 }
+
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
 
 export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   squareSize = 4,
@@ -31,15 +44,15 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
 
   const memoizedColor = useMemo(() => {
-    const toRGBA = (input: string) => {
+    const toRGBA = (color: string) => {
       if (typeof window === "undefined") {
-        return "rgba(0, 0, 0,";
+        return `rgba(0, 0, 0,`;
       }
       const canvas = document.createElement("canvas");
       canvas.width = canvas.height = 1;
       const ctx = canvas.getContext("2d");
       if (!ctx) return "rgba(255, 0, 0,";
-      ctx.fillStyle = input;
+      ctx.fillStyle = color;
       ctx.fillRect(0, 0, 1, 1);
       const [r, g, b] = Array.from(ctx.getImageData(0, 0, 1, 1).data);
       return `rgba(${r}, ${g}, ${b},`;
@@ -48,14 +61,14 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   }, [color]);
 
   const setupCanvas = useCallback(
-    (canvas: HTMLCanvasElement, newWidth: number, newHeight: number) => {
+    (canvas: HTMLCanvasElement, width: number, height: number) => {
       const dpr = window.devicePixelRatio || 1;
-      canvas.width = newWidth * dpr;
-      canvas.height = newHeight * dpr;
-      canvas.style.width = `${newWidth}px`;
-      canvas.style.height = `${newHeight}px`;
-      const cols = Math.floor(newWidth / (squareSize + gridGap));
-      const rows = Math.floor(newHeight / (squareSize + gridGap));
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+      const cols = Math.floor(width / (squareSize + gridGap));
+      const rows = Math.floor(height / (squareSize + gridGap));
 
       const squares = new Float32Array(cols * rows);
       for (let i = 0; i < squares.length; i++) {
@@ -81,16 +94,16 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   const drawGrid = useCallback(
     (
       ctx: CanvasRenderingContext2D,
-      widthPx: number,
-      heightPx: number,
+      width: number,
+      height: number,
       cols: number,
       rows: number,
       squares: Float32Array,
       dpr: number,
     ) => {
-      ctx.clearRect(0, 0, widthPx, heightPx);
+      ctx.clearRect(0, 0, width, height);
       ctx.fillStyle = "transparent";
-      ctx.fillRect(0, 0, widthPx, heightPx);
+      ctx.fillRect(0, 0, width, height);
 
       for (let i = 0; i < cols; i++) {
         for (let j = 0; j < rows; j++) {
@@ -116,7 +129,7 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let animationFrameId = 0;
+    let animationFrameId: number;
     let gridParams: ReturnType<typeof setupCanvas>;
 
     const updateCanvasSize = () => {
@@ -175,11 +188,18 @@ export const FlickeringGrid: React.FC<FlickeringGridProps> = ({
   }, [setupCanvas, updateSquares, drawGrid, width, height, isInView]);
 
   return (
-    <div ref={containerRef} className={cn("h-full w-full", className)} {...props}>
+    <div
+      ref={containerRef}
+      className={cn(`h-full w-full ${className}`)}
+      {...props}
+    >
       <canvas
         ref={canvasRef}
         className="pointer-events-none"
-        style={{ width: canvasSize.width, height: canvasSize.height }}
+        style={{
+          width: canvasSize.width,
+          height: canvasSize.height,
+        }}
       />
     </div>
   );
