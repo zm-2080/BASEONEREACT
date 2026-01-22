@@ -127,15 +127,18 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             : title}
         </motion.h1>
         {subheadline ? (
-          <motion.p
+          <motion.div
             initial="hidden"
             animate="show"
             variants={FADE_IN_ANIMATION_VARIANTS}
             transition={{ delay: 0.2 }}
-            className="mt-3 text-base sm:text-lg text-white/70 max-w-xl"
+            className="mt-3 flex flex-wrap items-center gap-4"
           >
-            {subheadline}
-          </motion.p>
+            <span className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              {subheadline}
+            </span>
+            <ActionButton onClick={onCtaClick}>{ctaText}</ActionButton>
+          </motion.div>
         ) : null}
       </div>
 
@@ -185,9 +188,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             >
               {description}
             </motion.p>
-            <div className="flex flex-col items-start md:items-end gap-3">
-              <ActionButton onClick={onCtaClick}>{ctaText}</ActionButton>
-            </div>
+          <div className="flex flex-col items-start md:items-end gap-3" />
           </div>
         </div>
       </div>
