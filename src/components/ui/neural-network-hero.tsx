@@ -150,7 +150,10 @@ const fragmentShader = `
 
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
+    vec4 base = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
+    vec3 orange = vec3(0.98, 0.45, 0.10);
+    vec3 color = mix(base.rgb, orange, 0.35);
+    gl_FragColor = vec4(color, 1.0);
   }
 `;
 
