@@ -79,7 +79,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
           squareSize={4}
           gridGap={4}
           flickerChance={0.12}
-          color="rgb(249, 115, 22)"
+          color="rgb(163, 230, 198)"
           maxOpacity={0.18}
         />
         <div className="absolute inset-0 opacity-80" style={maskStyle}>
@@ -87,7 +87,7 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             squareSize={3}
             gridGap={6}
             flickerChance={0.16}
-            color="rgb(255, 255, 255)"
+            color="rgb(147, 197, 253)"
             maxOpacity={0.45}
           />
         </div>
