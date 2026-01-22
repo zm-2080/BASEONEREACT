@@ -3,7 +3,6 @@
 import React from "react";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
-import { Gallery4 } from "@/components/ui/gallery4";
 import NeuralNetworkHero from "@/components/ui/neural-network-hero";
 
 export default function Home() {
