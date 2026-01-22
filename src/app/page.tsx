@@ -9,7 +9,7 @@ import NeuralNetworkHero from "@/components/ui/neural-network-hero";
 
 export default function Home() {
   return (
-    <main className="bg-[#07090b] text-white">
+    <main className="bg-white text-black">
       {/* Neural Network Hero Section */}
       <NeuralNetworkHero
         title="Websites that win jobs."
@@ -24,16 +24,16 @@ export default function Home() {
       />
 
       {/* Services Overview (inspired layout) */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-[#07090b]">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-gray-50">
         <div className="mx-auto max-w-6xl">
-          <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
+          <div className="text-xs uppercase tracking-[0.3em] text-black/50 mb-4">
             // Our services
           </div>
-          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-8 sm:mb-12">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-black mb-8 sm:mb-12">
             OUR SERVICES
           </h2>
 
-          <div className="divide-y divide-white/10 border-t border-white/10">
+          <div className="divide-y divide-black/10 border-t border-black/10">
             {[
               {
                 number: "001",
@@ -61,11 +61,11 @@ export default function Home() {
               },
             ].map((item) => (
               <div key={item.number} className="grid grid-cols-1 md:grid-cols-12 gap-4 py-6 sm:py-8">
-                <div className="md:col-span-2 text-sm text-white/40">{item.number}</div>
-                <div className="md:col-span-4 text-2xl sm:text-3xl font-semibold text-white">
+                <div className="md:col-span-2 text-sm text-black/40">{item.number}</div>
+                <div className="md:col-span-4 text-2xl sm:text-3xl font-semibold text-black">
                   {item.title}
                 </div>
-                <div className="md:col-span-6 text-sm sm:text-base text-white/60 leading-relaxed">
+                <div className="md:col-span-6 text-sm sm:text-base text-black/60 leading-relaxed">
                   {item.description}
                 </div>
               </div>
@@ -79,35 +79,35 @@ export default function Home() {
       </section>
 
       {/* Details / Proof Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-[#07090b]">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-white">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">
+              <div className="text-xs uppercase tracking-[0.3em] text-black/50 mb-3">
                 // Why choose us
               </div>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
+              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-black">
                 DETAILS MAKE
                 <br />
                 THE DIFFERENCE
               </h2>
             </div>
-            <p className="text-white/60 max-w-md text-sm sm:text-base leading-relaxed">
+            <p className="text-black/60 max-w-md text-sm sm:text-base leading-relaxed">
               We focus on the small things that win trust fast — clear copy, fast load times,
               and clean layouts that turn visitors into real enquiries.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-white/10 pt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-t border-black/10 pt-6">
             {[
               { value: "240+", label: "Sites delivered" },
               { value: "3–5 days", label: "Typical turnaround" },
               { value: "70+", label: "Hosted clients" },
               { value: "24hr", label: "Average response time" },
             ].map((stat) => (
-              <div key={stat.label} className="flex items-end justify-between border-b border-white/10 pb-4">
-                <div className="text-4xl sm:text-5xl font-bold text-white">{stat.value}</div>
-                <div className="text-xs uppercase tracking-widest text-white/50">{stat.label}</div>
+              <div key={stat.label} className="flex items-end justify-between border-b border-black/10 pb-4">
+                <div className="text-4xl sm:text-5xl font-bold text-black">{stat.value}</div>
+                <div className="text-xs uppercase tracking-widest text-black/50">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
               "Builders",
               "Landscapers",
             ].map((item) => (
-              <div key={item} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-xs sm:text-sm text-white/60">
+              <div key={item} className="rounded-xl border border-black/10 bg-black/5 px-4 py-3 text-xs sm:text-sm text-black/60">
                 {item}
               </div>
             ))}
@@ -128,37 +128,37 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-[#07090b]">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-gray-50">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 mb-8">
             <div>
-              <div className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">
+              <div className="text-xs uppercase tracking-[0.3em] text-black/50 mb-3">
                 // Pricing
               </div>
-              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white">
+              <h2 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-black">
                 CLEAR AND
                 <br />
                 SIMPLE PRICING
               </h2>
             </div>
-            <p className="text-white/60 max-w-md text-sm sm:text-base leading-relaxed">
+            <p className="text-black/60 max-w-md text-sm sm:text-base leading-relaxed">
               One build price, one monthly support plan. No hidden fees, no surprise invoices.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
-              <div className="text-sm uppercase tracking-widest text-white/40 mb-3">Build</div>
-              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">$499</div>
-              <p className="text-white/60 mb-6">One-time custom website build.</p>
-              <ul className="space-y-3 text-sm text-white/70">
+            <div className="rounded-2xl border border-purple-200 bg-white p-6 sm:p-8">
+              <div className="text-sm uppercase tracking-widest text-black/40 mb-3">Build</div>
+              <div className="text-4xl sm:text-5xl font-bold text-black mb-2">$499</div>
+              <p className="text-black/60 mb-6">One-time custom website build.</p>
+              <ul className="space-y-3 text-sm text-black/70">
                 <li>Custom design for your trade</li>
                 <li>5 pages built to convert</li>
                 <li>Mobile-first performance</li>
                 <li>Live in 3–5 days</li>
               </ul>
               <button
-                className="mt-6 w-full rounded-xl bg-orange-500 px-4 py-3 text-sm font-semibold text-white hover:bg-orange-600 transition-colors"
+                className="mt-6 w-full rounded-xl bg-purple-600 px-4 py-3 text-sm font-semibold text-white hover:bg-purple-700 transition-colors"
                 onClick={() => {
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                 }}
@@ -167,18 +167,18 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8">
-              <div className="text-sm uppercase tracking-widest text-white/40 mb-3">Maintenance</div>
-              <div className="text-4xl sm:text-5xl font-bold text-white mb-2">$30</div>
-              <p className="text-white/60 mb-6">Monthly hosting + support.</p>
-              <ul className="space-y-3 text-sm text-white/70">
+            <div className="rounded-2xl border border-purple-200 bg-white p-6 sm:p-8">
+              <div className="text-sm uppercase tracking-widest text-black/40 mb-3">Maintenance</div>
+              <div className="text-4xl sm:text-5xl font-bold text-black mb-2">$30</div>
+              <p className="text-black/60 mb-6">Monthly hosting + support.</p>
+              <ul className="space-y-3 text-sm text-black/70">
                 <li>Secure hosting + SSL</li>
                 <li>Basic updates and edits</li>
                 <li>Backups + monitoring</li>
                 <li>Cancel anytime</li>
               </ul>
               <button
-                className="mt-6 w-full rounded-xl border border-white/20 px-4 py-3 text-sm font-semibold text-white hover:bg-white/10 transition-colors"
+                className="mt-6 w-full rounded-xl border border-purple-300 px-4 py-3 text-sm font-semibold text-black hover:bg-purple-50 transition-colors"
                 onClick={() => {
                   document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
                 }}
@@ -190,30 +190,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 pb-6 sm:pb-10">
+      <section id="compare" className="w-full px-4 sm:px-6 lg:px-8 pt-1 sm:pt-2 pb-6 sm:pb-10 bg-white">
         <div className="text-center mb-6 sm:mb-8">
-          <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-white/50 mb-4">
-            <span className="h-px w-8 bg-orange-500"></span>
+          <div className="flex items-center justify-center gap-3 text-xs uppercase tracking-widest text-black/50 mb-4">
+            <span className="h-px w-8 bg-purple-600"></span>
             The Difference
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
             Before vs. After
           </h2>
-          <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto">
+          <p className="text-black/60 text-lg sm:text-xl max-w-2xl mx-auto">
             See the transformation. Generic templates vs. custom Base One design.
           </p>
         </div>
         
         <div className="flex justify-center items-center w-full">
-          <div className="w-full max-w-6xl bg-white/5 border border-white/10 rounded-3xl p-4 sm:p-6 lg:p-8 backdrop-blur-sm">
+          <div className="w-full max-w-6xl bg-gray-50 border border-purple-200 rounded-3xl p-4 sm:p-6 lg:p-8">
             <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
               <div className="text-center sm:text-left">
-                <div className="text-sm font-semibold text-white/40 mb-2">Before</div>
-                <div className="text-lg font-bold text-white">Generic Template</div>
+                <div className="text-sm font-semibold text-black/40 mb-2">Before</div>
+                <div className="text-lg font-bold text-black">Generic Template</div>
               </div>
               <div className="text-center sm:text-right sm:ml-auto">
-                <div className="text-sm font-semibold text-white/40 mb-2">After</div>
-                <div className="text-lg font-bold text-orange-500">Base One Design</div>
+                <div className="text-sm font-semibold text-black/40 mb-2">After</div>
+                <div className="text-lg font-bold text-purple-600">Base One Design</div>
               </div>
             </div>
             <Compare
@@ -225,49 +225,49 @@ export default function Home() {
               slideMode="hover"
               showHandlebar={true}
             />
-            <div className="mt-6 text-center text-sm text-white/60">
+            <div className="mt-6 text-center text-sm text-black/60">
               Hover or drag to compare
             </div>
           </div>
         </div>
       </section>
 
-      <section id="faq" className="mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-10">
+      <section id="faq" className="mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-10 bg-gray-50">
         <div className="grid gap-8 sm:gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4 space-y-8 sm:space-y-10 mb-8 lg:mb-0">
             <div>
-              <div className="text-xs uppercase tracking-widest text-white/40 mb-2">
+              <div className="text-xs uppercase tracking-widest text-black/40 mb-2">
                 Websites Delivered
               </div>
-              <div className="text-5xl sm:text-6xl font-bold text-white tracking-tighter">
-                240<span className="text-orange-500">+</span>
+              <div className="text-5xl sm:text-6xl font-bold text-black tracking-tighter">
+                240<span className="text-purple-600">+</span>
               </div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-white/40 mb-2">
+              <div className="text-xs uppercase tracking-widest text-black/40 mb-2">
                 Hosted Clients
               </div>
-              <div className="text-5xl sm:text-6xl font-bold text-white tracking-tighter">
-                70<span className="text-orange-500">+</span>
+              <div className="text-5xl sm:text-6xl font-bold text-black tracking-tighter">
+                70<span className="text-purple-600">+</span>
               </div>
             </div>
-            <div className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10">
-              <p className="text-white/80 italic text-sm mb-4">
+            <div className="relative p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-purple-200">
+              <p className="text-black/80 italic text-sm mb-4">
                 Best investment I made for my business this year. Simple process and great
                 result.
               </p>
               <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded-full bg-orange-500"></div>
-                <div className="text-xs font-bold">
-                  John D. <span className="text-white/40 font-normal">- Plumber</span>
+                <div className="w-6 h-6 rounded-full bg-purple-600"></div>
+                <div className="text-xs font-bold text-black">
+                  John D. <span className="text-black/40 font-normal">- Plumber</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-8">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Common Questions</h3>
-            <div className="divide-y divide-white/10 rounded-2xl sm:rounded-3xl border border-white/10 bg-white/5 overflow-hidden">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-black">Common Questions</h3>
+            <div className="divide-y divide-purple-200 rounded-2xl sm:rounded-3xl border border-purple-200 bg-white overflow-hidden">
               {[
                 {
                   q: "What exactly do I get for $499?",
@@ -291,13 +291,13 @@ export default function Home() {
                 },
               ].map((item, idx) => (
                 <details key={item.q} className="group p-4 sm:p-6 cursor-pointer" open={idx === 0}>
-                  <summary className="flex items-center justify-between gap-3 sm:gap-4 font-semibold text-white list-none text-sm sm:text-base">
+                  <summary className="flex items-center justify-between gap-3 sm:gap-4 font-semibold text-black list-none text-sm sm:text-base">
                     {item.q}
-                    <span className="text-orange-500 text-lg sm:text-xl group-open:rotate-45 transition-transform duration-300 flex-shrink-0">
+                    <span className="text-purple-600 text-lg sm:text-xl group-open:rotate-45 transition-transform duration-300 flex-shrink-0">
                       +
                     </span>
                   </summary>
-                  <p className="mt-3 sm:mt-4 text-sm text-white/60 leading-relaxed">{item.a}</p>
+                  <p className="mt-3 sm:mt-4 text-sm text-black/60 leading-relaxed">{item.a}</p>
                 </details>
               ))}
             </div>
@@ -305,9 +305,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="mx-auto max-w-6xl px-4 sm:px-6 pb-8 sm:pb-12">
+      <section id="contact" className="mx-auto max-w-6xl px-4 sm:px-6 pb-8 sm:pb-12 bg-white">
         <div className="grid gap-6 md:grid-cols-12">
-          <div className="md:col-span-5 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-orange-500 p-6 sm:p-10 flex flex-col justify-between min-h-[280px] sm:min-h-auto">
+          <div className="md:col-span-5 relative overflow-hidden rounded-2xl sm:rounded-3xl bg-purple-600 p-6 sm:p-10 flex flex-col justify-between min-h-[280px] sm:min-h-auto">
             <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="relative z-10">
               <h3 className="text-2xl sm:text-3xl font-bold text-white leading-tight mb-3 sm:mb-4">
@@ -326,42 +326,42 @@ export default function Home() {
           </div>
 
           <div className="md:col-span-7">
-            <form className="rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 p-6 sm:p-8 h-full">
+            <form className="rounded-2xl sm:rounded-3xl bg-gray-50 border border-purple-200 p-6 sm:p-8 h-full">
               <div className="grid gap-4 sm:gap-5 md:grid-cols-2">
                 <div className="md:col-span-2">
-                  <label className="text-xs uppercase tracking-widest text-white/40 mb-2 block">
+                  <label className="text-xs uppercase tracking-widest text-black/40 mb-2 block">
                     Name
                   </label>
                   <input
                     type="text"
                     placeholder="John Smith"
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20 text-sm sm:text-base"
+                    className="w-full bg-white border border-purple-200 rounded-xl px-4 py-3 text-black focus:border-purple-600 focus:ring-1 focus:ring-purple-600 outline-none transition-all placeholder:text-black/20 text-sm sm:text-base"
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label className="text-xs uppercase tracking-widest text-white/40 mb-2 block">
+                  <label className="text-xs uppercase tracking-widest text-black/40 mb-2 block">
                     Phone
                   </label>
                   <input
                     type="tel"
                     placeholder="0400 ..."
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20 text-sm sm:text-base"
+                    className="w-full bg-white border border-purple-200 rounded-xl px-4 py-3 text-black focus:border-purple-600 focus:ring-1 focus:ring-purple-600 outline-none transition-all placeholder:text-black/20 text-sm sm:text-base"
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label className="text-xs uppercase tracking-widest text-white/40 mb-2 block">
+                  <label className="text-xs uppercase tracking-widest text-black/40 mb-2 block">
                     Message
                   </label>
                   <textarea
                     rows={3}
                     placeholder="Tell us about your project..."
-                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-orange-500 focus:ring-1 focus:ring-orange-500 outline-none transition-all placeholder:text-white/20 text-sm sm:text-base resize-none"
+                    className="w-full bg-white border border-purple-200 rounded-xl px-4 py-3 text-black focus:border-purple-600 focus:ring-1 focus:ring-purple-600 outline-none transition-all placeholder:text-black/20 text-sm sm:text-base resize-none"
                   />
                 </div>
               </div>
               <button
                 type="submit"
-                className="mt-5 sm:mt-6 w-full rounded-xl bg-white text-black py-3 sm:py-4 font-bold text-sm hover:bg-gray-200 transition-colors"
+                className="mt-5 sm:mt-6 w-full rounded-xl bg-purple-600 text-white py-3 sm:py-4 font-bold text-sm hover:bg-purple-700 transition-colors"
               >
                 Send Enquiry →
               </button>

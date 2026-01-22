@@ -53,11 +53,11 @@ export const TextHoverEffect = ({
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor="#f97316" />
-              <stop offset="25%" stopColor="#ea580c" />
-              <stop offset="50%" stopColor="#f97316" />
-              <stop offset="75%" stopColor="#ea580c" />
-              <stop offset="100%" stopColor="#f97316" />
+              <stop offset="0%" stopColor="#9333ea" />
+              <stop offset="25%" stopColor="#7c3aed" />
+              <stop offset="50%" stopColor="#9333ea" />
+              <stop offset="75%" stopColor="#7c3aed" />
+              <stop offset="100%" stopColor="#9333ea" />
             </>
           )}
         </linearGradient>
@@ -102,8 +102,8 @@ export const TextHoverEffect = ({
         dominantBaseline="middle"
         strokeWidth="1"
         fontSize="120"
-        className="fill-transparent stroke-[#f97316] font-[helvetica] font-bold 
-        dark:stroke-[#f9731699]"
+        className="fill-transparent stroke-[#9333ea] font-[helvetica] font-bold 
+        dark:stroke-[#9333ea99]"
         initial={{ strokeDashoffset: 2000, strokeDasharray: 2000 }}
         animate={{
           strokeDashoffset: 0,
@@ -140,7 +140,7 @@ export const FooterBackgroundGradient = () => {
       className="absolute inset-0 z-0"
       style={{
         background:
-          "radial-gradient(125% 125% at 50% 10%, #0F0F1166 50%, #f9731633 100%)",
+          "radial-gradient(125% 125% at 50% 10%, #f9fafb66 50%, #9333ea33 100%)",
       }}
     />
   );
@@ -176,28 +176,28 @@ export default function HoverFooter() {
   // Contact info data - Base One specific
   const contactInfo = [
     {
-      icon: <FaEnvelope size={18} className="text-[#f97316]" />,
+      icon: <FaEnvelope size={18} className="text-purple-600" />,
       text: "hello@baseone.au",
       href: "mailto:hello@baseone.au",
     },
     {
-      icon: <FaMapMarkerAlt size={18} className="text-[#f97316]" />,
+      icon: <FaMapMarkerAlt size={18} className="text-purple-600" />,
       text: "Australia",
     },
   ];
 
   return (
-    <footer className="bg-[#0F0F11]/10 relative h-fit rounded-3xl overflow-hidden m-8">
+    <footer className="bg-gray-50 relative h-fit rounded-3xl overflow-hidden m-8 border border-purple-200">
       <div className="max-w-7xl mx-auto p-14 z-40 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8 lg:gap-16 pb-12">
           {/* Brand section */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="text-white text-3xl font-bold">
+              <span className="text-black text-3xl font-bold">
                 <span className="font-bold">Base</span><span className="opacity-70 font-light">One</span>
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-white/60">
+            <p className="text-sm leading-relaxed text-black/60">
               Professional websites for local businesses. $499 build, $30/month support. No bloat, just leads.
             </p>
           </div>
@@ -205,7 +205,7 @@ export default function HoverFooter() {
           {/* Footer link sections */}
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h4 className="text-white text-lg font-semibold mb-6">
+              <h4 className="text-black text-lg font-semibold mb-6">
                 {section.title}
               </h4>
               <ul className="space-y-3">
@@ -213,12 +213,12 @@ export default function HoverFooter() {
                   <li key={link.label} className="relative">
                     <a
                       href={link.href}
-                      className="text-white/60 hover:text-[#f97316] transition-colors"
+                      className="text-black/60 hover:text-purple-600 transition-colors"
                     >
                       {link.label}
                     </a>
                     {link.pulse && (
-                      <span className="absolute top-0 right-[-10px] w-2 h-2 rounded-full bg-[#f97316] animate-pulse"></span>
+                      <span className="absolute top-0 right-[-10px] w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
                     )}
                   </li>
                 ))}
@@ -228,7 +228,7 @@ export default function HoverFooter() {
 
           {/* Contact section */}
           <div>
-            <h4 className="text-white text-lg font-semibold mb-6">
+            <h4 className="text-black text-lg font-semibold mb-6">
               Contact Us
             </h4>
             <ul className="space-y-4">
@@ -238,12 +238,12 @@ export default function HoverFooter() {
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-white/60 hover:text-[#f97316] transition-colors"
+                      className="text-black/60 hover:text-purple-600 transition-colors"
                     >
                       {item.text}
                     </a>
                   ) : (
-                    <span className="text-white/60 hover:text-[#f97316] transition-colors">
+                    <span className="text-black/60 hover:text-purple-600 transition-colors">
                       {item.text}
                     </span>
                   )}
@@ -253,11 +253,11 @@ export default function HoverFooter() {
           </div>
         </div>
 
-        <hr className="border-t border-white/10 my-8" />
+        <hr className="border-t border-black/10 my-8" />
 
         {/* Footer bottom */}
         <div className="flex justify-center text-sm">
-          <p className="text-center text-white/60">
+          <p className="text-center text-black/60">
             &copy; {new Date().getFullYear()} Base One. All rights reserved.
           </p>
         </div>

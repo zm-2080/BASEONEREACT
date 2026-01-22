@@ -48,24 +48,24 @@ export default function StackFeatureSection() {
   const iconsPerOrbit = Math.ceil(iconConfigs.length / orbitCount);
 
   return (
-        <section className="relative max-w-6xl mx-auto my-16 sm:my-24 md:my-24image.png px-4 sm:px-6 md:pl-10 flex flex-col md:flex-row items-center justify-between min-h-[35rem] md:min-h-[40rem] border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden rounded-2xl sm:rounded-3xl">
+        <section className="relative max-w-6xl mx-auto my-16 sm:my-24 md:my-24 px-4 sm:px-6 md:pl-10 flex flex-col md:flex-row items-center justify-between min-h-[35rem] md:min-h-[40rem] border border-purple-200 bg-white overflow-hidden rounded-2xl sm:rounded-3xl">
       {/* Left side: Heading and Text */}
       <div className="w-full md:w-1/2 z-10 py-8 md:py-0">
-        <div className="flex items-center gap-3 text-sm sm:text-base uppercase tracking-widest text-white/50 mb-6">
-          <span className="h-px w-10 bg-orange-500"></span>
+        <div className="flex items-center gap-3 text-sm sm:text-base uppercase tracking-widest text-black/50 mb-6">
+          <span className="h-px w-10 bg-purple-600"></span>
           Why Base One
         </div>
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 text-white leading-tight">
-          We strip away the <span className="text-white/40">agency bloat.</span>
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 md:mb-8 text-black leading-tight">
+          We strip away the <span className="text-black/40">agency bloat.</span>
         </h2>
-        <p className="text-white/60 dark:text-gray-300 mb-8 md:mb-10 max-w-lg text-lg sm:text-xl md:text-2xl leading-relaxed">
+        <p className="text-black/60 mb-8 md:mb-10 max-w-lg text-lg sm:text-xl md:text-2xl leading-relaxed">
           Professional websites built for local businesses. No bloat, just results.
         </p>
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
           <Button
             variant="default"
             size="lg"
-            className="bg-[#f97316] text-white hover:bg-[#ea580c] text-lg sm:text-xl px-8 sm:px-10 py-6 sm:py-7 font-semibold"
+            className="bg-purple-600 text-white hover:bg-purple-700 text-lg sm:text-xl px-8 sm:px-10 py-6 sm:py-7 font-semibold"
             onClick={() => {
               document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
             }}
@@ -75,7 +75,7 @@ export default function StackFeatureSection() {
           <Button
             variant="outline"
             size="lg"
-            className="border-white/30 text-white hover:bg-white/10 text-lg sm:text-xl px-8 sm:px-10 py-6 sm:py-7 font-semibold"
+            className="border-purple-300 text-black hover:bg-purple-50 text-lg sm:text-xl px-8 sm:px-10 py-6 sm:py-7 font-semibold"
             onClick={() => {
               document.getElementById("examples")?.scrollIntoView({ behavior: "smooth" });
             }}
