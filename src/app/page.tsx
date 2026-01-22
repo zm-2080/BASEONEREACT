@@ -5,34 +5,22 @@ import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
 import { Gallery4 } from "@/components/ui/gallery4";
-import { AnimatedMarqueeHero } from "@/components/ui/hero-3";
+import NeuralNetworkHero from "@/components/ui/neural-network-hero";
 
 export default function Home() {
   return (
     <main className="bg-[#07090b] text-white">
-      {/* Dummy Marquee Hero Section */}
-      <AnimatedMarqueeHero
-        title={
-          <>
-            BASE ONE
-          </>
-        }
-        subheadline="Websites that win jobs."
+      {/* Neural Network Hero Section */}
+      <NeuralNetworkHero
+        title="Websites that win jobs."
         description="You already do great work. We help you look credible online and turn more visitors into quote requests — without the headaches."
-        trustItems={["★★★★★ 4.8/5", "Avg 3.2x more quote requests", "Live in 3–5 days"]}
-        ctaText="Start your project"
-        onCtaClick={() => {
-          document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-        }}
-        images={[
-          "/Architectural.png",
-          "/new.png",
-          "/Electrical.png",
-          "/Architectural.png",
-          "/new.png",
-          "/Electrical.png",
+        badgeLabel="Base One"
+        badgeText="Local Business Web Studio"
+        ctaButtons={[
+          { text: "Start your project", href: "#contact", primary: true },
+          { text: "View recent sites", href: "#examples" },
         ]}
-        className="py-12 sm:py-16"
+        microDetails={["$499 build", "$30/month support", "3–5 day turnaround"]}
       />
 
       {/* Services Overview (inspired layout) */}
