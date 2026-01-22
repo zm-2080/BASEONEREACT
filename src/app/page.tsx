@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import StackFeatureSection from "@/components/ui/stack-feature-section";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
 import { Gallery4 } from "@/components/ui/gallery4";
@@ -70,10 +69,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section id="services" className="mx-auto max-w-7xl pt-2 sm:pt-4 pb-1 sm:pb-2">
-        <StackFeatureSection />
       </section>
 
       {/* Details / Proof Section */}
