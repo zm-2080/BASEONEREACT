@@ -111,19 +111,6 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {[
-              "Local trades",
-              "Service pros",
-              "Builders",
-              "Landscapers",
-            ].map((item) => (
-              <div key={item} className="rounded-xl border border-black/10 bg-black/5 px-4 py-3 text-xs sm:text-sm text-black/60">
-                {item}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
