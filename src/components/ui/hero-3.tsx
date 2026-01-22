@@ -141,10 +141,10 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
 
       {/* Centered carousel band */}
       <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-10">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="w-full px-0">
           <div className="relative w-full overflow-hidden">
             <motion.div
-              className="relative z-10 flex gap-4"
+              className="relative z-10 flex gap-4 w-full"
               animate={{
                 x: ["-100%", "0%"],
                 transition: {
