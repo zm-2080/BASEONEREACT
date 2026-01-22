@@ -151,8 +151,8 @@ export default function Hero({
     <section ref={sectionRef} className="relative min-h-screen w-screen overflow-hidden bg-white">
       <FlickeringGridBackground />
 
-      {/* Large BASE ONE text spanning full width edge-to-edge */}
-      <div className="absolute top-8 sm:top-10 md:top-12 left-0 w-full z-20 flex justify-center overflow-hidden">
+      {/* Large BASE ONE text spanning full width with buffer */}
+      <div className="absolute top-8 sm:top-10 md:top-12 left-0 w-full z-20 flex justify-center overflow-hidden px-4 sm:px-6 md:px-8">
         <div className="text-[28vw] sm:text-[26vw] md:text-[24vw] lg:text-[22vw] font-bold leading-none tracking-tighter text-transparent whitespace-nowrap" style={{
           WebkitTextStroke: '2px rgb(147, 51, 234)',
           letterSpacing: '-0.05em'
