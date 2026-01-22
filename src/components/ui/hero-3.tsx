@@ -174,14 +174,14 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
 
       {/* Bottom row */}
       <div className="absolute inset-x-0 bottom-0 z-20">
-        <div className="mx-auto max-w-7xl px-6 pb-8 sm:pb-10">
+        <div className="w-full px-4 sm:px-6 pb-3 sm:pb-4">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 text-white/70">
             <motion.p
               initial="hidden"
               animate="show"
               variants={FADE_IN_ANIMATION_VARIANTS}
               transition={{ delay: 0.3 }}
-            className="text-sm sm:text-base leading-relaxed max-w-md text-left text-white/90 font-semibold"
+              className="text-lg sm:text-xl md:text-2xl leading-relaxed max-w-md text-left text-white font-semibold"
             >
               {description}
             </motion.p>
