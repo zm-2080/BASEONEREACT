@@ -150,19 +150,7 @@ const fragmentShader = `
 
   void main() {
     vec2 uv = vUv * 2.0 - 1.0; uv.y *= -1.0;
-    vec4 base = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
-    
-    // Create vibrant purple-to-blue gradient based on position
-    vec3 purple = vec3(0.55, 0.15, 0.85);
-    vec3 blue = vec3(0.15, 0.35, 0.95);
-    vec3 gradient = mix(purple, blue, uv.x * 0.5 + 0.5);
-    
-    // Mix the neural pattern with the gradient, boosting brightness
-    vec3 color = mix(gradient, base.rgb, 0.15);
-    color = pow(color, vec3(0.8)); // Increase brightness
-    color = color * 1.4; // Boost intensity
-    
-    gl_FragColor = vec4(color, 1.0);
+    gl_FragColor = cppn_fn(uv, 0.1 * sin(0.3 * iTime), 0.1 * sin(0.69 * iTime), 0.1 * sin(0.44 * iTime));
   }
 `;
 
@@ -224,16 +212,16 @@ function ShaderBackground() {
   );
 
   return (
-    <div ref={canvasRef} className="absolute inset-0 -z-10 w-full h-full" aria-hidden>
+    <div ref={canvasRef} className="bg-black absolute inset-0 -z-10 w-full h-full" aria-hidden>
       <Canvas
         camera={camera}
-        gl={{ antialias: true, alpha: true }}
+        gl={{ antialias: true, alpha: false }}
         dpr={[1, 2]}
         style={{ width: "100%", height: "100%" }}
       >
         <ShaderPlane />
       </Canvas>
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-purple-600/30 via-blue-600/20 to-blue-500/25" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20" />
     </div>
   );
 }
@@ -337,7 +325,7 @@ export default function Hero({
   );
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden">
       <ShaderBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16">
