@@ -186,13 +186,6 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
               {description}
             </motion.p>
             <div className="flex flex-col items-start md:items-end gap-3">
-              {trustItems.length ? (
-                <div className="text-xs sm:text-sm text-white/60 text-left md:text-right space-y-1">
-                  {trustItems.map((item) => (
-                    <div key={item}>{item}</div>
-                  ))}
-                </div>
-              ) : null}
               <ActionButton onClick={onCtaClick}>{ctaText}</ActionButton>
             </div>
           </div>
