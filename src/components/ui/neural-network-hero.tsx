@@ -26,14 +26,14 @@ const maskStyle = {
 // Grid configuration
 const GRID_CONFIG = {
   background: {
-    color: "rgb(249, 115, 22)", // Base One orange
+    color: "rgb(216, 180, 254)", // Light purple
     maxOpacity: 0.15,
     flickerChance: 0.12,
     squareSize: 4,
     gridGap: 4,
   },
   logo: {
-    color: "rgb(249, 115, 22)", // Base One orange
+    color: "rgb(192, 132, 252)", // Medium light purple
     maxOpacity: 0.65,
     flickerChance: 0.18,
     squareSize: 3,
@@ -160,21 +160,21 @@ export default function Hero({
   );
 
   return (
-    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden bg-black">
+    <section ref={sectionRef} className="relative h-screen w-screen overflow-hidden bg-white">
       <FlickeringGridBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16 z-10">
-        <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm">
-          <span className="text-[10px] font-light uppercase tracking-[0.08em] text-white/70">{badgeLabel}</span>
-          <span className="h-1 w-1 rounded-full bg-white/40" />
-          <span className="text-xs font-light tracking-tight text-white/80">{badgeText}</span>
+        <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-3 py-1.5 backdrop-blur-sm">
+          <span className="text-[10px] font-light uppercase tracking-[0.08em] text-black/70">{badgeLabel}</span>
+          <span className="h-1 w-1 rounded-full bg-black/40" />
+          <span className="text-xs font-light tracking-tight text-black/80">{badgeText}</span>
         </div>
 
-        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl">
+        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl">
           {title}
         </h1>
 
-        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-white/75 sm:text-lg">
+        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-black/75 sm:text-lg">
           {description}
         </p>
 
@@ -183,10 +183,10 @@ export default function Hero({
             <a
               key={index}
               href={button.href}
-              className={`rounded-2xl border border-white/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-white/30 duration-300 ${
+              className={`rounded-2xl border border-black/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-black/30 duration-300 ${
                 button.primary
-                  ? "bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
-                  : "text-white/80 hover:bg-white/5"
+                  ? "bg-black/10 text-black backdrop-blur-sm hover:bg-black/20"
+                  : "text-black/80 hover:bg-black/5"
               }`}
             >
               {button.text}
@@ -194,19 +194,19 @@ export default function Hero({
           ))}
         </div>
 
-        <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-white/60">
+        <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-black/60">
           {microDetails.map((detail, index) => {
             const refMap = [microItem1Ref, microItem2Ref, microItem3Ref];
             return (
               <li key={index} ref={refMap[index]} className="flex items-center gap-2">
-                <span className="h-1 w-1 rounded-full bg-white/40" /> {detail}
+                <span className="h-1 w-1 rounded-full bg-black/40" /> {detail}
               </li>
             );
           })}
         </ul>
       </div>
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent z-10" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/40 to-transparent z-10" />
     </section>
   );
 }
