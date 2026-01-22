@@ -79,14 +79,18 @@ const Gallery4 = ({
   }, [carouselApi]);
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto">
-        <div className="mb-8 flex items-end justify-between md:mb-14 lg:mb-16">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-3xl font-medium text-black md:text-4xl lg:text-5xl">
+    <section id="examples" className="py-16 sm:py-20 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-10 sm:mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-black/40">
+              <span className="h-px w-8 bg-purple-600" />
+              Examples
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
               {title}
             </h2>
-            <p className="max-w-lg text-gray-600">{description}</p>
+            <p className="max-w-2xl text-gray-600 text-base sm:text-lg">{description}</p>
           </div>
           <div className="hidden shrink-0 gap-2 md:flex">
             <Button
@@ -96,7 +100,7 @@ const Gallery4 = ({
                 carouselApi?.scrollPrev();
               }}
               disabled={!canScrollPrev}
-              className="disabled:pointer-events-auto hover:bg-purple-100"
+              className="disabled:pointer-events-auto disabled:opacity-30 hover:bg-purple-100 text-black"
             >
               <ArrowLeft className="size-5" />
             </Button>
@@ -107,17 +111,19 @@ const Gallery4 = ({
                 carouselApi?.scrollNext();
               }}
               disabled={!canScrollNext}
-              className="disabled:pointer-events-auto hover:bg-purple-100"
+              className="disabled:pointer-events-auto disabled:opacity-30 hover:bg-purple-100 text-black"
             >
               <ArrowRight className="size-5" />
             </Button>
           </div>
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <Carousel
           setApi={setCarouselApi}
           opts={{
+            align: "start",
+            loop: true,
             breakpoints: {
               "(max-width: 768px)": {
                 dragFree: true,
@@ -125,30 +131,35 @@ const Gallery4 = ({
             },
           }}
         >
-          <CarouselContent className="ml-0 2xl:ml-[max(8rem,calc(50vw-700px))] 2xl:mr-[max(0rem,calc(50vw-700px))]">
+          <CarouselContent className="-ml-4">
             {items.map((item) => (
               <CarouselItem
                 key={item.id}
-                className="max-w-[320px] pl-[20px] lg:max-w-[360px]"
+                className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3"
               >
-                <a href={item.href} target="_blank" rel="noopener noreferrer" className="group rounded-xl">
-                  <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
+                <a 
+                  href={item.href} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="group block"
+                >
+                  <div className="relative w-full aspect-[16/10] overflow-hidden rounded-xl border-2 border-purple-200 shadow-lg transition-all duration-300 group-hover:border-purple-400 group-hover:shadow-xl">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 h-full bg-gradient-to-b from-transparent via-purple-900/40 to-purple-900/90 mix-blend-multiply" />
-                    <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-white md:p-8">
-                      <div className="mb-2 pt-4 text-xl font-semibold md:mb-3 md:pt-4 lg:pt-4">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 flex flex-col items-start justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <h3 className="text-xl font-bold text-white mb-2">
                         {item.title}
-                      </div>
-                      <div className="mb-8 line-clamp-2 md:mb-12 lg:mb-9 text-white/90">
+                      </h3>
+                      <p className="text-sm text-white/90 mb-4 line-clamp-2">
                         {item.description}
-                      </div>
-                      <div className="flex items-center text-sm font-medium">
+                      </p>
+                      <div className="flex items-center text-sm font-medium text-white">
                         Visit site{" "}
-                        <ArrowRight className="ml-2 size-5 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
                       </div>
                     </div>
                   </div>
@@ -157,12 +168,12 @@ const Gallery4 = ({
             ))}
           </CarouselContent>
         </Carousel>
-        <div className="mt-8 flex justify-center gap-2">
+        <div className="mt-6 flex justify-center gap-2">
           {items.map((_, index) => (
             <button
               key={index}
-              className={`h-2 w-2 rounded-full transition-colors ${
-                currentSlide === index ? "bg-purple-600" : "bg-purple-600/20"
+              className={`h-2 w-2 rounded-full transition-all duration-300 ${
+                currentSlide === index ? "bg-purple-600 w-8" : "bg-purple-600/20 hover:bg-purple-600/40"
               }`}
               onClick={() => carouselApi?.scrollTo(index)}
               aria-label={`Go to slide ${index + 1}`}
