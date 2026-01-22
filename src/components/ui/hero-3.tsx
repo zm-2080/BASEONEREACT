@@ -93,52 +93,55 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
         </div>
       </div>
 
-      <div className="relative z-10 w-full h-full px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-16 flex flex-col">
-        {/* Top-left brand */}
-        <div className="text-left mb-6">
-          <span className="text-xs uppercase tracking-[0.35em] text-white/50">
-            {tagline ?? "Base One"}
-          </span>
-        </div>
-
-        {/* Main headline */}
-        <div className="text-left space-y-3">
-          <motion.h1
+      {/* Top-left pinned headline */}
+      <div className="absolute top-0 left-0 z-20 p-8 md:p-12 text-left">
+        {tagline ? (
+          <motion.div
             initial="hidden"
             animate="show"
-            variants={{
-              hidden: {},
-              show: {
-                transition: {
-                  staggerChildren: 0.08,
-                },
-              },
-            }}
-            className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] font-bold tracking-tight text-white leading-[0.95] max-w-[14ch]"
+            variants={FADE_IN_ANIMATION_VARIANTS}
+            className="text-xs uppercase tracking-[0.35em] text-white/50 mb-3"
           >
-            {typeof title === "string"
-              ? title.split(" ").map((word, i) => (
-                  <motion.span key={i} variants={FADE_IN_ANIMATION_VARIANTS} className="inline-block">
-                    {word}&nbsp;
-                  </motion.span>
-                ))
-              : title}
-          </motion.h1>
-          {subheadline ? (
-            <motion.p
-              initial="hidden"
-              animate="show"
-              variants={FADE_IN_ANIMATION_VARIANTS}
-              transition={{ delay: 0.2 }}
-              className="text-base sm:text-lg text-white/70 max-w-xl"
-            >
-              {subheadline}
-            </motion.p>
-          ) : null}
-        </div>
+            {tagline}
+          </motion.div>
+        ) : null}
+        <motion.h1
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.08,
+              },
+            },
+          }}
+          className="text-[12vw] sm:text-[10vw] md:text-[8vw] lg:text-[7vw] font-bold tracking-tight text-white leading-[0.95] max-w-[14ch]"
+        >
+          {typeof title === "string"
+            ? title.split(" ").map((word, i) => (
+                <motion.span key={i} variants={FADE_IN_ANIMATION_VARIANTS} className="inline-block">
+                  {word}&nbsp;
+                </motion.span>
+              ))
+            : title}
+        </motion.h1>
+        {subheadline ? (
+          <motion.p
+            initial="hidden"
+            animate="show"
+            variants={FADE_IN_ANIMATION_VARIANTS}
+            transition={{ delay: 0.2 }}
+            className="mt-3 text-base sm:text-lg text-white/70 max-w-xl"
+          >
+            {subheadline}
+          </motion.p>
+        ) : null}
+      </div>
 
-        {/* Carousel band across the center */}
-        <div className="mt-8 sm:mt-10 lg:mt-12 -mx-4 sm:-mx-6 lg:-mx-10">
+      {/* Centered carousel band */}
+      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 z-10">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="relative w-full overflow-hidden">
             <motion.div
               className="relative z-10 flex gap-4"
@@ -167,27 +170,31 @@ export const AnimatedMarqueeHero: React.FC<AnimatedMarqueeHeroProps> = ({
             </motion.div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom row */}
-        <div className="mt-auto w-full flex flex-col md:flex-row md:items-end md:justify-between gap-6 text-white/70">
-          <motion.p
-            initial="hidden"
-            animate="show"
-            variants={FADE_IN_ANIMATION_VARIANTS}
-            transition={{ delay: 0.3 }}
-            className="text-sm sm:text-base leading-relaxed max-w-md text-left"
-          >
-            {description}
-          </motion.p>
-          <div className="flex flex-col items-start md:items-end gap-3">
-            {trustItems.length ? (
-              <div className="text-xs sm:text-sm text-white/60 text-left md:text-right space-y-1">
-                {trustItems.map((item) => (
-                  <div key={item}>{item}</div>
-                ))}
-              </div>
-            ) : null}
-            <ActionButton onClick={onCtaClick}>{ctaText}</ActionButton>
+      {/* Bottom row */}
+      <div className="absolute inset-x-0 bottom-0 z-20">
+        <div className="mx-auto max-w-7xl px-6 pb-8 sm:pb-10">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 text-white/70">
+            <motion.p
+              initial="hidden"
+              animate="show"
+              variants={FADE_IN_ANIMATION_VARIANTS}
+              transition={{ delay: 0.3 }}
+            className="text-sm sm:text-base leading-relaxed max-w-md text-left text-white/90 font-semibold"
+            >
+              {description}
+            </motion.p>
+            <div className="flex flex-col items-start md:items-end gap-3">
+              {trustItems.length ? (
+                <div className="text-xs sm:text-sm text-white/60 text-left md:text-right space-y-1">
+                  {trustItems.map((item) => (
+                    <div key={item}>{item}</div>
+                  ))}
+                </div>
+              ) : null}
+              <ActionButton onClick={onCtaClick}>{ctaText}</ActionButton>
+            </div>
           </div>
         </div>
       </div>
