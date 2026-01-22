@@ -5,6 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { FlickeringGrid } from "./flickering-grid-hero";
+import { AnimatedGroup } from "./animated-group";
+import Image from "next/image";
 
 gsap.registerPlugin(SplitText, useGSAP);
 
@@ -158,42 +160,78 @@ export default function Hero({
         BASE ONE
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16 z-10">
-        <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl">
-          {title}
-        </h1>
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2 gap-8 items-center px-6 pb-24 pt-36 sm:pt-44 md:px-10 lg:px-16 z-10 h-full">
+        {/* Left Column - Text Content */}
+        <div className="flex flex-col items-start gap-6 sm:gap-8">
+          <h1 ref={headerRef} className="text-left text-5xl font-extralight leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl">
+            {title}
+          </h1>
 
-        <p ref={paraRef} className="max-w-xl text-left text-base font-light leading-relaxed tracking-tight text-black/75 sm:text-lg">
-          {description}
-        </p>
+          <p ref={paraRef} className="text-left text-base font-light leading-relaxed tracking-tight text-black/75 sm:text-lg">
+            {description}
+          </p>
 
-        <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
-          {ctaButtons.map((button, index) => (
-            <a
-              key={index}
-              href={button.href}
-              style={!button.primary ? { backgroundColor: 'white', color: 'black' } : undefined}
-              className={`rounded-2xl border px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 duration-300 ${
-                button.primary
-                  ? "bg-purple-600 text-white border-purple-600 hover:bg-purple-700 focus:ring-purple-300"
-                  : "border-purple-300 hover:bg-purple-50 focus:ring-purple-300"
-              }`}
-            >
-              {button.text}
-            </a>
-          ))}
+          <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
+            {ctaButtons.map((button, index) => (
+              <a
+                key={index}
+                href={button.href}
+                style={!button.primary ? { backgroundColor: 'white', color: 'black' } : undefined}
+                className={`rounded-2xl border px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 duration-300 ${
+                  button.primary
+                    ? "bg-purple-600 text-white border-purple-600 hover:bg-purple-700 focus:ring-purple-300"
+                    : "border-purple-300 hover:bg-purple-50 focus:ring-purple-300"
+                }`}
+              >
+                {button.text}
+              </a>
+            ))}
+          </div>
+
+          <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-black/60">
+            {microDetails.map((detail, index) => {
+              const refMap = [microItem1Ref, microItem2Ref, microItem3Ref];
+              return (
+                <li key={index} ref={refMap[index]} className="flex items-center gap-2">
+                  <span className="h-1 w-1 rounded-full bg-black/40" /> {detail}
+                </li>
+              );
+            })}
+          </ul>
         </div>
 
-        <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-black/60">
-          {microDetails.map((detail, index) => {
-            const refMap = [microItem1Ref, microItem2Ref, microItem3Ref];
-            return (
-              <li key={index} ref={refMap[index]} className="flex items-center gap-2">
-                <span className="h-1 w-1 rounded-full bg-black/40" /> {detail}
-              </li>
-            );
-          })}
-        </ul>
+        {/* Right Column - Example Website Images */}
+        <div className="hidden lg:flex items-center justify-end">
+          <AnimatedGroup
+            className="grid grid-cols-1 gap-6 w-full max-w-lg"
+            preset="blur-slide"
+          >
+            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
+              <Image
+                src="/Architectural.png"
+                alt="Construction Website Example"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
+              <Image
+                src="/new.png"
+                alt="Landscaping Website Example"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
+              <Image
+                src="/Electrical.png"
+                alt="Electrical Website Example"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </AnimatedGroup>
+        </div>
       </div>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/40 to-transparent z-10" />
