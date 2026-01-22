@@ -165,10 +165,10 @@ export default function Hero({
             <a
               key={index}
               href={button.href}
-              className={`rounded-2xl border border-black/10 px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 focus:ring-black/30 duration-300 ${
+              className={`rounded-2xl border px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 duration-300 ${
                 button.primary
-                  ? "bg-black/10 text-black backdrop-blur-sm hover:bg-black/20"
-                  : "text-black/80 hover:bg-black/5"
+                  ? "bg-purple-600 text-white border-purple-600 hover:bg-purple-700 focus:ring-purple-300"
+                  : "border-purple-300 text-black hover:bg-purple-50 focus:ring-purple-300"
               }`}
             >
               {button.text}
