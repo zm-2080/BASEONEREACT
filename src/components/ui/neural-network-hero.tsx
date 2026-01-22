@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { FlickeringGrid } from "./flickering-grid-hero";
-import { AnimatedGroup } from "./animated-group";
+import { Carousel, CarouselContent, CarouselItem, CarouselNavigation, CarouselIndicator } from "./carousel";
 import Image from "next/image";
 
 gsap.registerPlugin(SplitText, useGSAP);
@@ -200,37 +200,44 @@ export default function Hero({
           </ul>
         </div>
 
-        {/* Right Column - Example Website Images */}
-        <div className="hidden lg:block flex-shrink-0">
-          <AnimatedGroup
-            className="grid grid-cols-1 gap-4 w-[420px] xl:w-[480px]"
-            preset="blur-slide"
-          >
-            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
-              <Image
-                src="/Architectural.png"
-                alt="Construction Website Example"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
-              <Image
-                src="/new.png"
-                alt="Landscaping Website Example"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
-              <Image
-                src="/Electrical.png"
-                alt="Electrical Website Example"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </AnimatedGroup>
+        {/* Right Column - Example Website Images Carousel */}
+        <div className="hidden lg:block flex-shrink-0 w-[420px] xl:w-[480px]">
+          <Carousel className="w-full">
+            <CarouselContent>
+              <CarouselItem>
+                <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
+                  <Image
+                    src="/Architectural.png"
+                    alt="Construction Website Example"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
+                  <Image
+                    src="/new.png"
+                    alt="Landscaping Website Example"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="relative w-full aspect-[16/10] overflow-hidden rounded-2xl border border-purple-200 shadow-lg">
+                  <Image
+                    src="/Electrical.png"
+                    alt="Electrical Website Example"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselNavigation alwaysShow />
+            <CarouselIndicator className="bottom-4" />
+          </Carousel>
         </div>
       </div>
 
