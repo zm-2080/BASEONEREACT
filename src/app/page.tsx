@@ -14,8 +14,6 @@ export default function Home() {
       <NeuralNetworkHero
         title="Websites that win jobs."
         description="You already do great work. We help you look credible online and turn more visitors into quote requests — without the headaches."
-        badgeLabel="Base One"
-        badgeText="Local Business Web Studio"
         ctaButtons={[
           { text: "Start your project", href: "#contact", primary: true },
           { text: "View recent sites", href: "#examples" },

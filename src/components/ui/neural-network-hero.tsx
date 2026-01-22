@@ -65,8 +65,6 @@ function FlickeringGridBackground() {
 interface HeroProps {
   title: string;
   description: string;
-  badgeText?: string;
-  badgeLabel?: string;
   ctaButtons?: Array<{ text: string; href: string; primary?: boolean }>;
   microDetails?: Array<string>;
 }
@@ -74,8 +72,6 @@ interface HeroProps {
 export default function Hero({
   title,
   description,
-  badgeText = "Local Business Web Studio",
-  badgeLabel = "Base One",
   ctaButtons = [
     { text: "Start your project", href: "#contact", primary: true },
     { text: "View recent sites", href: "#examples" }
@@ -86,7 +82,6 @@ export default function Hero({
   const headerRef = useRef<HTMLHeadingElement | null>(null);
   const paraRef = useRef<HTMLParagraphElement | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
-  const badgeRef = useRef<HTMLDivElement | null>(null);
   const microRef = useRef<HTMLUListElement | null>(null);
   const microItem1Ref = useRef<HTMLLIElement | null>(null);
   const microItem2Ref = useRef<HTMLLIElement | null>(null);
@@ -110,9 +105,6 @@ export default function Hero({
           transformOrigin: "50% 100%",
         });
 
-        if (badgeRef.current) {
-          gsap.set(badgeRef.current, { autoAlpha: 0, y: -8 });
-        }
         if (paraRef.current) {
           gsap.set(paraRef.current, { autoAlpha: 0, y: 8 });
         }
@@ -128,10 +120,6 @@ export default function Hero({
           defaults: { ease: "power3.out" },
         });
 
-        if (badgeRef.current) {
-          tl.to(badgeRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, 0.0);
-        }
-
         tl.to(
           split.lines,
           {
@@ -142,11 +130,11 @@ export default function Hero({
             duration: 0.9,
             stagger: 0.15,
           },
-          0.1,
+          0.0,
         );
 
         if (paraRef.current) {
-          tl.to(paraRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, "-=0.55");
+          tl.to(paraRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, "-=0.45");
         }
         if (ctaRef.current) {
           tl.to(ctaRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, "-=0.35");
@@ -164,12 +152,6 @@ export default function Hero({
       <FlickeringGridBackground />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 pb-24 pt-36 sm:gap-8 sm:pt-44 md:px-10 lg:px-16 z-10">
-        <div ref={badgeRef} className="inline-flex items-center gap-2 rounded-full border border-black/10 bg-black/5 px-3 py-1.5 backdrop-blur-sm">
-          <span className="text-[10px] font-light uppercase tracking-[0.08em] text-black/70">{badgeLabel}</span>
-          <span className="h-1 w-1 rounded-full bg-black/40" />
-          <span className="text-xs font-light tracking-tight text-black/80">{badgeText}</span>
-        </div>
-
         <h1 ref={headerRef} className="max-w-2xl text-left text-5xl font-extralight leading-[1.05] tracking-tight text-black sm:text-6xl md:text-7xl">
           {title}
         </h1>
