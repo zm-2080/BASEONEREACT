@@ -4,6 +4,7 @@ import React from "react";
 import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
 import NeuralNetworkHero from "@/components/ui/neural-network-hero";
+import { Gallery4 } from "@/components/ui/gallery4";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
         ]}
         microDetails={["$499 build", "$30/month support", "3–5 day turnaround"]}
       />
+
+      {/* Example Websites Gallery */}
+      <Gallery4 />
 
       {/* Services Overview (inspired layout) */}
       <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-gray-50">
