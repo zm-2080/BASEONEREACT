@@ -151,19 +151,20 @@ export default function Hero({
     <section ref={sectionRef} className="relative min-h-screen w-screen overflow-hidden bg-white">
       <FlickeringGridBackground />
 
-      {/* Large BASE ONE text spanning full width with buffer */}
+      {/* Large BASE ONE text - stacks on mobile, inline on desktop */}
       <div className="absolute top-8 sm:top-10 md:top-12 left-0 w-full z-20 flex justify-center overflow-hidden px-4 sm:px-6 md:px-8">
-        <div className="text-[28vw] sm:text-[26vw] md:text-[24vw] lg:text-[22vw] font-bold leading-none tracking-tighter text-transparent whitespace-nowrap" style={{
+        <div className="text-[28vw] sm:text-[26vw] md:text-[24vw] lg:text-[22vw] font-bold leading-[0.85] md:leading-none tracking-tighter text-transparent text-center md:whitespace-nowrap" style={{
           WebkitTextStroke: '2px rgb(147, 51, 234)',
           letterSpacing: '-0.05em'
         }}>
-          BASE ONE
+          <span className="block md:inline">BASE</span>{" "}
+          <span className="block md:inline">ONE</span>
         </div>
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl items-center justify-center px-6 py-24 md:px-10 lg:px-16 z-10 min-h-screen">
-        {/* Text Content */}
-        <div className="flex flex-col items-start gap-6 sm:gap-8 max-w-2xl">
+      <div className="relative mx-auto flex max-w-7xl items-end justify-start px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-10 min-h-screen">
+        {/* Text Content - Bottom Left */}
+        <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-2xl">
           <h1 ref={headerRef} className="text-left text-4xl sm:text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tight text-black">
             {title}
           </h1>
