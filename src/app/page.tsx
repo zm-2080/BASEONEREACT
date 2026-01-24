@@ -7,6 +7,8 @@ import NeuralNetworkHero from "@/components/ui/neural-network-hero";
 import { Gallery4 } from "@/components/ui/gallery4";
 import NotificationBar from "@/components/ui/notification-bar";
 import ValueStack from "@/components/ui/value-stack";
+import { ShineBorder } from "@/components/ui/shine-border";
+import { Check } from "lucide-react";
 
 export default function Home() {
   return (
@@ -137,26 +139,68 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-purple-200 bg-white p-6 sm:p-8">
-              <div className="text-sm uppercase tracking-widest text-black/40 mb-3">Build</div>
-              <div className="text-4xl sm:text-5xl font-bold text-black mb-2">$499</div>
-              <p className="text-black/60 mb-6">One-time custom website build.</p>
-              <ul className="space-y-3 text-sm text-black/70">
-                <li>Custom design for your trade</li>
-                <li>5 pages built to convert</li>
-                <li>Mobile-first performance</li>
-                <li>Live in 3–5 days</li>
-              </ul>
-              <button
-                className="mt-6 w-full rounded-xl bg-purple-600 px-4 py-3 text-sm font-semibold text-white hover:bg-purple-700 transition-colors"
-                onClick={() => {
-                  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                Get a quick quote
-              </button>
-            </div>
+            {/* Launch Offer Card with Shine Border */}
+            <ShineBorder
+              borderRadius={24}
+              borderWidth={2}
+              duration={12}
+              color={["#9333ea", "#a855f7", "#c084fc"]}
+              className="overflow-visible"
+            >
+              <div className="p-6 sm:p-8">
+                {/* Badge */}
+                <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold uppercase tracking-wider mb-4">
+                  Launch Offer
+                </div>
 
+                {/* Price Anchoring */}
+                <div className="mb-6">
+                  <div className="flex items-baseline gap-3 mb-2">
+                    <span className="text-lg text-black/40 line-through font-medium">
+                      $1,499
+                    </span>
+                    <span className="text-xs uppercase tracking-wider text-black/40">
+                      Standard Package
+                    </span>
+                  </div>
+                  <div className="text-5xl sm:text-6xl font-bold text-purple-600 mb-2">
+                    $499
+                  </div>
+                  <p className="text-black/60 text-sm">
+                    + $30/month for hosting & support
+                  </p>
+                </div>
+
+                {/* Features List */}
+                <ul className="space-y-3 mb-8">
+                  {[
+                    "5-Page Custom Build",
+                    "Mobile-First Design",
+                    "Live in 3-5 Days",
+                    "$0 Upfront Deposit",
+                  ].map((feature, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-black/80">
+                      <div className="flex-shrink-0 w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center">
+                        <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                      </div>
+                      <span className="text-sm sm:text-base font-medium">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA Button */}
+                <button
+                  className="w-full rounded-xl bg-purple-600 px-4 py-4 text-base font-bold text-white hover:bg-purple-700 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  onClick={() => {
+                    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Claim $499 Offer
+                </button>
+              </div>
+            </ShineBorder>
+
+            {/* Maintenance Card */}
             <div className="rounded-2xl border border-purple-200 bg-white p-6 sm:p-8">
               <div className="text-sm uppercase tracking-widest text-black/40 mb-3">Maintenance</div>
               <div className="text-4xl sm:text-5xl font-bold text-black mb-2">$30</div>
