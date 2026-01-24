@@ -14,7 +14,7 @@ const valueItems: ValueItem[] = [
   { title: "Custom Design (No Templates)", value: "$1,500" },
   { title: "Mobile Speed Optimization", value: "$500" },
   { title: "Google Business Profile Setup", value: "$300" },
-  { title: ""Get a Quote" Lead Funnel", value: "$500" },
+  { title: '"Get a Quote" Lead Funnel', value: "$500" },
 ];
 
 export default function ValueStack() {
