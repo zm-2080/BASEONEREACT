@@ -7,6 +7,7 @@ import { SplitText } from "gsap/SplitText";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { FlickeringGrid } from "./flickering-grid-hero";
+import { IPhone } from "./iphone";
 
 gsap.registerPlugin(SplitText, useGSAP);
 
@@ -151,66 +152,93 @@ export default function Hero({
         </div>
       </div>
 
-      <div className="relative mx-auto flex max-w-7xl items-end justify-start px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-10 min-h-screen">
-        {/* Text Content - Bottom Left */}
-        <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-2xl">
-          {/* Trust Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-row items-center justify-center sm:justify-start gap-2 mb-4"
-          >
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
-                  strokeWidth={0}
-                />
+      <div className="relative mx-auto max-w-7xl px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-10 min-h-screen flex items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full items-end">
+          {/* Text Content - Left Side */}
+          <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-2xl">
+            {/* Trust Badge */}
+            <motion.div 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-row items-center justify-center sm:justify-start gap-2 mb-4"
+            >
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                    strokeWidth={0}
+                  />
+                ))}
+              </div>
+              <span className="text-sm font-medium text-gray-600">
+                Specializing in Trade & Construction
+              </span>
+            </motion.div>
+
+            <motion.h1 
+              ref={headerRef}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="text-left text-4xl sm:text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tight text-black"
+            >
+              {title}
+            </motion.h1>
+
+            <motion.p 
+              ref={paraRef}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              className="text-left text-base sm:text-lg font-light leading-relaxed tracking-tight text-black/75 max-w-xl"
+            >
+              {description}
+            </motion.p>
+
+            <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
+              {ctaButtons.map((button, index) => (
+                <a
+                  key={index}
+                  href={button.href}
+                  style={!button.primary ? { backgroundColor: 'white', color: 'black' } : undefined}
+                  className={`rounded-2xl border px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 duration-300 ${
+                    button.primary
+                      ? "bg-purple-600 text-white border-purple-600 hover:bg-purple-700 focus:ring-purple-300"
+                      : "border-purple-300 hover:bg-purple-50 focus:ring-purple-300"
+                  }`}
+                >
+                  {button.text}
+                </a>
               ))}
             </div>
-            <span className="text-sm font-medium text-gray-600">
-              Specializing in Trade & Construction
-            </span>
-          </motion.div>
-
-          <motion.h1 
-            ref={headerRef}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-left text-4xl sm:text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tight text-black"
-          >
-            {title}
-          </motion.h1>
-
-          <motion.p 
-            ref={paraRef}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-left text-base sm:text-lg font-light leading-relaxed tracking-tight text-black/75 max-w-xl"
-          >
-            {description}
-          </motion.p>
-
-          <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
-            {ctaButtons.map((button, index) => (
-              <a
-                key={index}
-                href={button.href}
-                style={!button.primary ? { backgroundColor: 'white', color: 'black' } : undefined}
-                className={`rounded-2xl border px-5 py-3 text-sm font-light tracking-tight transition-colors focus:outline-none focus:ring-2 duration-300 ${
-                  button.primary
-                    ? "bg-purple-600 text-white border-purple-600 hover:bg-purple-700 focus:ring-purple-300"
-                    : "border-purple-300 hover:bg-purple-50 focus:ring-purple-300"
-                }`}
-              >
-                {button.text}
-              </a>
-            ))}
           </div>
+
+          {/* iPhone Showcase - Right Side (Hidden on Mobile) */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              y: [0, -10, 0],
+            }}
+            transition={{ 
+              opacity: { duration: 0.8, delay: 0.4 },
+              x: { duration: 0.8, delay: 0.4 },
+              y: {
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }
+            }}
+            className="hidden lg:flex justify-center items-center"
+          >
+            <IPhone 
+              imageSrc="/iphone landscaping.jpg"
+              className="w-full max-w-[280px]"
+            />
+          </motion.div>
         </div>
       </div>
 
