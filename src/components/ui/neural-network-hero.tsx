@@ -152,7 +152,7 @@ export default function Hero({
       <FlickeringGridBackground />
 
       {/* Large BASE ONE text - stacks left-aligned on mobile, inline centered on desktop */}
-      <div className="absolute top-8 sm:top-10 md:top-12 left-0 w-full z-20 flex justify-start md:justify-center overflow-hidden px-4 sm:px-6 md:px-8">
+      <div className="absolute top-8 sm:top-10 md:top-12 left-0 w-full z-20 flex justify-start md:justify-center overflow-hidden px-8 sm:px-12 md:px-16 lg:px-20">
         <div className="text-[28vw] sm:text-[26vw] md:text-[24vw] lg:text-[22vw] font-bold leading-[0.85] md:leading-none tracking-tighter text-transparent text-left md:text-center md:whitespace-nowrap" style={{
           WebkitTextStroke: '2px rgb(147, 51, 234)',
           letterSpacing: '-0.05em'
