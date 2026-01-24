@@ -5,19 +5,22 @@ import { Compare } from "@/components/ui/compare";
 import HoverFooter from "@/components/ui/hover-footer";
 import NeuralNetworkHero from "@/components/ui/neural-network-hero";
 import { Gallery4 } from "@/components/ui/gallery4";
+import NotificationBar from "@/components/ui/notification-bar";
 
 export default function Home() {
   return (
     <main className="bg-white text-black">
+      {/* Top Notification Bar */}
+      <NotificationBar />
+
       {/* Neural Network Hero Section */}
       <NeuralNetworkHero
         title="Websites that win jobs."
-        description="You already do great work. We help you look credible online and turn more visitors into quote requests — without the headaches."
+        description="Most tradie websites are ugly, slow, and leak leads. We build high-converting sites that turn local traffic into booked jobs. Get a premium site for a fraction of the cost during our Launch Month."
         ctaButtons={[
-          { text: "Start your project", href: "#contact", primary: true },
+          { text: "Get My Quote", href: "#contact", primary: true },
           { text: "View recent sites", href: "#examples" },
         ]}
-        microDetails={["$499 build", "$30/month support", "3–5 day turnaround"]}
       />
 
       {/* Example Websites Gallery */}

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { motion } from "framer-motion";
 import { FlickeringGrid } from "./flickering-grid-hero";
 
 gsap.registerPlugin(SplitText, useGSAP);
@@ -66,26 +67,20 @@ interface HeroProps {
   title: string;
   description: string;
   ctaButtons?: Array<{ text: string; href: string; primary?: boolean }>;
-  microDetails?: Array<string>;
 }
 
 export default function Hero({
   title,
   description,
   ctaButtons = [
-    { text: "Start your project", href: "#contact", primary: true },
+    { text: "Get My Quote", href: "#contact", primary: true },
     { text: "View recent sites", href: "#examples" }
   ],
-  microDetails = ["$499 build", "$30/month support", "3–5 day turnaround"]
 }: HeroProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
   const paraRef = useRef<HTMLParagraphElement | null>(null);
   const ctaRef = useRef<HTMLDivElement | null>(null);
-  const microRef = useRef<HTMLUListElement | null>(null);
-  const microItem1Ref = useRef<HTMLLIElement | null>(null);
-  const microItem2Ref = useRef<HTMLLIElement | null>(null);
-  const microItem3Ref = useRef<HTMLLIElement | null>(null);
 
   useGSAP(
     () => {
@@ -111,10 +106,6 @@ export default function Hero({
         if (ctaRef.current) {
           gsap.set(ctaRef.current, { autoAlpha: 0, y: 8 });
         }
-        const microItems = [microItem1Ref.current, microItem2Ref.current, microItem3Ref.current].filter(Boolean);
-        if (microItems.length > 0) {
-          gsap.set(microItems, { autoAlpha: 0, y: 6 });
-        }
 
         const tl = gsap.timeline({
           defaults: { ease: "power3.out" },
@@ -139,9 +130,6 @@ export default function Hero({
         if (ctaRef.current) {
           tl.to(ctaRef.current, { autoAlpha: 1, y: 0, duration: 0.5 }, "-=0.35");
         }
-        if (microItems.length > 0) {
-          tl.to(microItems, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.1 }, "-=0.25");
-        }
       });
     },
     { scope: sectionRef },
@@ -165,13 +153,25 @@ export default function Hero({
       <div className="relative mx-auto flex max-w-7xl items-end justify-start px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-10 min-h-screen">
         {/* Text Content - Bottom Left */}
         <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-2xl">
-          <h1 ref={headerRef} className="text-left text-4xl sm:text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tight text-black">
+          <motion.h1 
+            ref={headerRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-left text-4xl sm:text-5xl md:text-6xl font-extralight leading-[1.1] tracking-tight text-black"
+          >
             {title}
-          </h1>
+          </motion.h1>
 
-          <p ref={paraRef} className="text-left text-base sm:text-lg font-light leading-relaxed tracking-tight text-black/75 max-w-xl">
+          <motion.p 
+            ref={paraRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-left text-base sm:text-lg font-light leading-relaxed tracking-tight text-black/75 max-w-xl"
+          >
             {description}
-          </p>
+          </motion.p>
 
           <div ref={ctaRef} className="flex flex-wrap items-center gap-3 pt-2">
             {ctaButtons.map((button, index) => (
@@ -189,17 +189,6 @@ export default function Hero({
               </a>
             ))}
           </div>
-
-          <ul ref={microRef} className="mt-8 flex flex-wrap gap-6 text-xs font-extralight tracking-tight text-black/60">
-            {microDetails.map((detail, index) => {
-              const refMap = [microItem1Ref, microItem2Ref, microItem3Ref];
-              return (
-                <li key={index} ref={refMap[index]} className="flex items-center gap-2">
-                  <span className="h-1 w-1 rounded-full bg-black/40" /> {detail}
-                </li>
-              );
-            })}
-          </ul>
         </div>
       </div>
 
