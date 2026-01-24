@@ -219,14 +219,14 @@ export default function Hero({
           <motion.div 
             className="hidden lg:flex justify-center items-end relative pb-0"
           >
-            {/* Stack Container - Positioned lower */}
-            <div className="relative w-full max-w-[400px] h-[650px]">
-              {/* Background Phone - Left (Same height as right) */}
+            {/* Stack Container - Wider for more spread */}
+            <div className="relative w-full max-w-[500px] h-[650px]">
+              {/* Background Phone - Left (Further out) */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -40 }}
                 animate={{ 
                   opacity: 0.7, 
-                  x: -50,
+                  x: -90,
                   y: 0,
                 }}
                 transition={{ 
@@ -241,12 +241,12 @@ export default function Hero({
                 />
               </motion.div>
 
-              {/* Background Phone - Right (Same height as left) */}
+              {/* Background Phone - Right (Further out) */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 40 }}
                 animate={{ 
                   opacity: 0.7, 
-                  x: 50,
+                  x: 90,
                   y: 0,
                 }}
                 transition={{ 
