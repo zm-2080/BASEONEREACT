@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { motion } from "framer-motion";
+import { Star } from "lucide-react";
 import { FlickeringGrid } from "./flickering-grid-hero";
 
 gsap.registerPlugin(SplitText, useGSAP);
@@ -153,6 +154,27 @@ export default function Hero({
       <div className="relative mx-auto flex max-w-7xl items-end justify-start px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-10 min-h-screen">
         {/* Text Content - Bottom Left */}
         <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-2xl">
+          {/* Trust Badge */}
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex flex-row items-center justify-center sm:justify-start gap-2 mb-4"
+          >
+            <div className="flex gap-0.5">
+              {[...Array(5)].map((_, i) => (
+                <Star
+                  key={i}
+                  className="w-4 h-4 fill-yellow-400 text-yellow-400"
+                  strokeWidth={0}
+                />
+              ))}
+            </div>
+            <span className="text-sm font-medium text-gray-600">
+              Specializing in Trade & Construction
+            </span>
+          </motion.div>
+
           <motion.h1 
             ref={headerRef}
             initial={{ opacity: 0, y: 20 }}
