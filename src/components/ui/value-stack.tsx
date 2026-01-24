@@ -39,7 +39,7 @@ export default function ValueStack() {
       x: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: [0.4, 0, 0.2, 1],
       },
     },
   };
@@ -52,7 +52,7 @@ export default function ValueStack() {
       transition: {
         duration: 0.6,
         delay: 0.8,
-        ease: "easeOut",
+        ease: [0.4, 0, 0.2, 1],
       },
     },
   };
