@@ -26,12 +26,12 @@ export function IPhone({
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80px] h-[24px] bg-black rounded-b-3xl z-10" />
             
             {/* Content */}
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full bg-white">
               {imageSrc ? (
                 <img
                   src={imageSrc}
                   alt="iPhone screenshot"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-contain object-top"
                 />
               ) : (
                 children
