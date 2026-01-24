@@ -215,29 +215,83 @@ export default function Hero({
             </div>
           </div>
 
-          {/* iPhone Showcase - Right Side (Hidden on Mobile) */}
+          {/* iPhone Stack Showcase - Right Side (Hidden on Mobile) */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ 
-              opacity: 1, 
-              x: 0,
-              y: [0, -10, 0],
-            }}
-            transition={{ 
-              opacity: { duration: 0.8, delay: 0.4 },
-              x: { duration: 0.8, delay: 0.4 },
-              y: {
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }
-            }}
-            className="hidden lg:flex justify-center items-center"
+            className="hidden lg:flex justify-center items-center relative"
           >
-            <IPhone 
-              imageSrc="/iphone landscaping.jpg"
-              className="w-full max-w-[280px]"
-            />
+            {/* Stack Container */}
+            <div className="relative w-full max-w-[320px] h-[600px]">
+              {/* Background Phone - Left */}
+              <motion.div
+                initial={{ opacity: 0, x: -30, y: -20 }}
+                animate={{ 
+                  opacity: 0.7, 
+                  x: -40,
+                  y: -30,
+                }}
+                transition={{ 
+                  opacity: { duration: 0.6, delay: 0.4 },
+                  x: { duration: 0.6, delay: 0.4 },
+                  y: { duration: 0.6, delay: 0.4 },
+                }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+              >
+                <IPhone 
+                  imageSrc="/Electrical.png"
+                  variant="light"
+                  className="w-full max-w-[240px] opacity-80"
+                />
+              </motion.div>
+
+              {/* Background Phone - Right */}
+              <motion.div
+                initial={{ opacity: 0, x: 30, y: 20 }}
+                animate={{ 
+                  opacity: 0.7, 
+                  x: 40,
+                  y: 40,
+                }}
+                transition={{ 
+                  opacity: { duration: 0.6, delay: 0.5 },
+                  x: { duration: 0.6, delay: 0.5 },
+                  y: { duration: 0.6, delay: 0.5 },
+                }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+              >
+                <IPhone 
+                  imageSrc="/Architectural.png"
+                  variant="light"
+                  className="w-full max-w-[240px] opacity-80"
+                />
+              </motion.div>
+
+              {/* Main Phone - Center (Front) */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ 
+                  opacity: 1, 
+                  scale: 1,
+                  y: [0, -10, 0],
+                }}
+                transition={{ 
+                  opacity: { duration: 0.8, delay: 0.6 },
+                  scale: { duration: 0.8, delay: 0.6 },
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.2,
+                  }
+                }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
+              >
+                <IPhone 
+                  imageSrc="/iphone landscaping.jpg"
+                  variant="light"
+                  className="w-full max-w-[280px]"
+                />
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
