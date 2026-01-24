@@ -31,7 +31,7 @@ export function IPhone({
                 <img
                   src={imageSrc}
                   alt="iPhone screenshot"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               ) : (
                 children
