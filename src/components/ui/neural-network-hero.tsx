@@ -238,7 +238,7 @@ export default function Hero({
               >
                 <IPhone 
                   imageSrc="/Electrical.png"
-                  variant="light"
+                  variant="dark"
                   className="w-full max-w-[240px] opacity-80"
                 />
               </motion.div>
@@ -260,7 +260,7 @@ export default function Hero({
               >
                 <IPhone 
                   imageSrc="/Architectural.png"
-                  variant="light"
+                  variant="dark"
                   className="w-full max-w-[240px] opacity-80"
                 />
               </motion.div>
@@ -287,7 +287,7 @@ export default function Hero({
               >
                 <IPhone 
                   imageSrc="/iphone landscaping.jpg"
-                  variant="light"
+                  variant="dark"
                   className="w-full max-w-[280px]"
                 />
               </motion.div>
