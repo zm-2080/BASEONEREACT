@@ -217,51 +217,47 @@ export default function Hero({
 
           {/* iPhone Stack Showcase - Right Side (Hidden on Mobile) */}
           <motion.div 
-            className="hidden lg:flex justify-center items-center relative"
+            className="hidden lg:flex justify-center items-end relative pb-0"
           >
-            {/* Stack Container */}
-            <div className="relative w-full max-w-[320px] h-[600px]">
-              {/* Background Phone - Left */}
+            {/* Stack Container - Positioned lower */}
+            <div className="relative w-full max-w-[400px] h-[650px]">
+              {/* Background Phone - Left (Same height as right) */}
               <motion.div
-                initial={{ opacity: 0, x: -30, y: -20 }}
+                initial={{ opacity: 0, x: -30 }}
                 animate={{ 
                   opacity: 0.7, 
-                  x: -40,
-                  y: -30,
+                  x: -50,
+                  y: 0,
                 }}
                 transition={{ 
                   opacity: { duration: 0.6, delay: 0.4 },
                   x: { duration: 0.6, delay: 0.4 },
-                  y: { duration: 0.6, delay: 0.4 },
                 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
               >
                 <IPhone 
                   imageSrc="/Electrical.png"
-                  variant="dark"
-                  className="w-full max-w-[240px] opacity-80"
+                  className="w-full max-w-[300px] opacity-80"
                 />
               </motion.div>
 
-              {/* Background Phone - Right */}
+              {/* Background Phone - Right (Same height as left) */}
               <motion.div
-                initial={{ opacity: 0, x: 30, y: 20 }}
+                initial={{ opacity: 0, x: 30 }}
                 animate={{ 
                   opacity: 0.7, 
-                  x: 40,
-                  y: 40,
+                  x: 50,
+                  y: 0,
                 }}
                 transition={{ 
                   opacity: { duration: 0.6, delay: 0.5 },
                   x: { duration: 0.6, delay: 0.5 },
-                  y: { duration: 0.6, delay: 0.5 },
                 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20"
               >
                 <IPhone 
                   imageSrc="/Architectural.png"
-                  variant="dark"
-                  className="w-full max-w-[240px] opacity-80"
+                  className="w-full max-w-[300px] opacity-80"
                 />
               </motion.div>
 
@@ -283,12 +279,11 @@ export default function Hero({
                     delay: 1.2,
                   }
                 }}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
+                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30"
               >
                 <IPhone 
                   imageSrc="/iphone landscaping.jpg"
-                  variant="dark"
-                  className="w-full max-w-[280px]"
+                  className="w-full max-w-[340px]"
                 />
               </motion.div>
             </div>
