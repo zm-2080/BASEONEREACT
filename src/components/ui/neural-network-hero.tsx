@@ -142,7 +142,7 @@ export default function Hero({
       <FlickeringGridBackground />
 
       {/* Large BASE ONE text - stacks left-aligned on mobile, inline centered on desktop */}
-      <div className="absolute top-4 sm:top-4 md:top-6 left-0 w-full z-20 flex justify-start md:justify-center overflow-hidden px-6 sm:px-8 md:px-8 lg:px-10">
+      <div className="absolute top-4 sm:top-4 md:top-6 left-0 w-full z-10 flex justify-start md:justify-center overflow-hidden px-6 sm:px-8 md:px-8 lg:px-10">
         <div className="text-[28vw] sm:text-[26vw] md:text-[22vw] lg:text-[20vw] xl:text-[19vw] font-bold leading-[0.85] md:leading-none tracking-tighter text-transparent text-left md:text-center md:whitespace-nowrap" style={{
           WebkitTextStroke: '2px rgb(147, 51, 234)',
           letterSpacing: '-0.05em'
@@ -152,7 +152,7 @@ export default function Hero({
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-10 min-h-screen flex items-end">
+      <div className="relative mx-auto max-w-7xl px-6 pb-16 sm:pb-20 md:pb-24 md:px-10 lg:px-16 z-20 min-h-screen flex items-end">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 w-full items-end">
           {/* Text Content - Left Side */}
           <div className="flex flex-col items-start gap-4 sm:gap-6 max-w-2xl">
@@ -217,7 +217,7 @@ export default function Hero({
 
           {/* iPhone Stack Showcase - Right Side (Hidden on Mobile) */}
           <motion.div 
-            className="hidden lg:flex justify-center items-center relative"
+            className="hidden lg:flex justify-center items-center relative z-40"
           >
             {/* Stack Container - Positioned higher to overlap with "ONE" text */}
             <div className="relative w-full max-w-[500px] h-[650px]">
