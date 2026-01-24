@@ -236,7 +236,7 @@ export default function Hero({
                 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
               >
                 <IPhone 
-                  imageSrc="/Electrical.png"
+                  imageSrc="/eletric iphone.jpg"
                   className="w-full max-w-[300px] opacity-80"
                 />
               </motion.div>
@@ -256,7 +256,7 @@ export default function Hero({
                 className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
               >
                 <IPhone 
-                  imageSrc="/Architectural.png"
+                  imageSrc="/archtitect iphone.jpg"
                   className="w-full max-w-[300px] opacity-80"
                 />
               </motion.div>
