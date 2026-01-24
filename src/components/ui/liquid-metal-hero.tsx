@@ -70,7 +70,7 @@ export default function LiquidMetalHero({
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#07090b]/70 via-[#07090b]/50 to-[#07090b]/70 z-[1]"></div>
       
-      <div className="container mx-auto px-6 lg:px-8 max-w-7xl relative z-10">
+      <div className="container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
         <motion.div 
           className="text-center space-y-8"
           variants={containerVariants}
