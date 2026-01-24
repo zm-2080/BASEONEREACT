@@ -256,9 +256,12 @@ export default function HoverFooter() {
         <hr className="border-t border-black/10 my-8" />
 
         {/* Footer bottom */}
-        <div className="flex justify-center text-sm">
+        <div className="flex flex-col items-center gap-2 text-sm">
           <p className="text-center text-black/60">
             &copy; {new Date().getFullYear()} Base One. All rights reserved.
+          </p>
+          <p className="text-center text-black/50 text-xs">
+            Proudly serving Australian Trades.
           </p>
         </div>
       </div>

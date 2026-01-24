@@ -53,7 +53,7 @@ const data = [
 ];
 
 const Gallery4 = ({
-  title = "Recent Sites We've Shipped",
+  title = "Local Projects We've Built",
   description = "Built fast, tuned for conversions, and ready to win jobs. See how we help local trades and service businesses look credible online.",
   items = data,
 }: Gallery4Props) => {

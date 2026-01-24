@@ -306,7 +306,7 @@ export default function Home() {
                 {
                   q: "What exactly do I get for $499?",
                   a:
-                    "You get a fully custom designed, 5-page website built to look great on mobile and desktop. This includes your Home, About, Services, Gallery, and Contact pages.",
+                    "Normally this package is $1,499. For our launch month, you get the full custom design, mobile optimization, and 5-page build for just $499 to help us build our local portfolio.",
                 },
                 {
                   q: "What does the $30/month cover?",
