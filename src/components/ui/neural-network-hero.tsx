@@ -217,9 +217,9 @@ export default function Hero({
 
           {/* iPhone Stack Showcase - Right Side (Hidden on Mobile) */}
           <motion.div 
-            className="hidden lg:flex justify-center items-end relative pb-0"
+            className="hidden lg:flex justify-center items-center relative"
           >
-            {/* Stack Container - Wider for more spread */}
+            {/* Stack Container - Positioned higher to overlap with "ONE" text */}
             <div className="relative w-full max-w-[500px] h-[650px]">
               {/* Background Phone - Left (Further out) */}
               <motion.div
@@ -233,7 +233,7 @@ export default function Hero({
                   opacity: { duration: 0.6, delay: 0.4 },
                   x: { duration: 0.6, delay: 0.4 },
                 }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10"
               >
                 <IPhone 
                   imageSrc="/Electrical.png"
@@ -253,7 +253,7 @@ export default function Hero({
                   opacity: { duration: 0.6, delay: 0.5 },
                   x: { duration: 0.6, delay: 0.5 },
                 }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-20"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
               >
                 <IPhone 
                   imageSrc="/Architectural.png"
@@ -279,7 +279,7 @@ export default function Hero({
                     delay: 1.2,
                   }
                 }}
-                className="absolute bottom-0 left-1/2 -translate-x-1/2 z-30"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30"
               >
                 <IPhone 
                   imageSrc="/iphone landscaping.jpg"
