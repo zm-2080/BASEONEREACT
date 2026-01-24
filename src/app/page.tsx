@@ -6,6 +6,7 @@ import HoverFooter from "@/components/ui/hover-footer";
 import NeuralNetworkHero from "@/components/ui/neural-network-hero";
 import { Gallery4 } from "@/components/ui/gallery4";
 import NotificationBar from "@/components/ui/notification-bar";
+import ValueStack from "@/components/ui/value-stack";
 
 export default function Home() {
   return (
@@ -112,6 +113,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* The Value Stack Section */}
+      <ValueStack />
 
       {/* Pricing Section */}
       <section className="w-full px-4 sm:px-6 lg:px-8 py-10 sm:py-14 bg-gray-50">
